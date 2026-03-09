@@ -70,7 +70,7 @@ function DiagDivider({ topColor, botColor, flip = false }) {
     </div>
   );
 }
-
+// ── Nav ───────────────────────────────────────────────────────────────────────
 function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
