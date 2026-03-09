@@ -195,10 +195,10 @@ function Hero() {
               <span style={{ fontSize: "0.67rem", letterSpacing: "0.28em", color: C.gold, textTransform: "uppercase", fontFamily: "'DM Sans',sans-serif" }}>Bertinoro · Emilia-Romagna · B&amp;B</span>
             </div>
             <h1 style={{ opacity: loaded?1:0, transform: loaded?"translateY(0)":"translateY(28px)", transition: "all 0.85s ease 0.3s", fontFamily: "'Cormorant Garamond','Playfair Display',serif", fontSize: "clamp(2.6rem,5.5vw,5rem)", fontWeight: 700, color: C.text, lineHeight: 1.04, letterSpacing: "-0.02em", margin: "0 0 1.2rem" }}>
-              Beleef de Romagna<br /><span style={{ color: C.gold, fontStyle: "italic" }}>als een local.</span>
+              Beleef Romagna<br /><span style={{ color: C.gold, fontStyle: "italic" }}>als een local.</span>
             </h1>
             <p style={{ opacity: loaded?1:0, transform: loaded?"translateY(0)":"translateY(24px)", transition: "all 0.85s ease 0.46s", fontSize: "clamp(0.93rem,1.8vw,1.08rem)", color: C.textMid, lineHeight: 1.82, margin: "0 0 2rem", fontFamily: "'DM Sans',sans-serif" }}>
-              Een design appartement in het historisch centrum van Bertinoro — het <em style={{ color: C.text }}>"Balkon van de Romagna"</em>. Voor stellen, professionals en reizigers die op zoek zijn naar authenticiteit, comfort en een echte band met de regio.
+              Een design appartement in het historisch centrum van Bertinoro, het <em style={{ color: C.text }}>"Balkon van de Romagna"</em>. Voor stellen, professionals en reizigers die op zoek zijn naar authenticiteit, comfort en een echte band met de regio.
             </p>
             <div style={{ opacity: loaded?1:0, transform: loaded?"translateY(0)":"translateY(24px)", transition: "all 0.85s ease 0.6s", display: "flex", gap: "1rem", flexWrap: "wrap" }}>
               <a href="https://airbnb.com/h/casacavour-bertinoro" target="_blank" rel="noopener noreferrer"
@@ -276,7 +276,7 @@ function Apartment() {
                 Jouw thuis<br /><span style={{ color: C.gold, fontStyle: "italic" }}>vanaf de eerste dag.</span>
               </h2>
               <p style={{ fontSize: "0.94rem", color: C.textMid, lineHeight: 1.85, fontFamily: "'DM Sans',sans-serif", marginBottom: "1.2rem" }}>
-                <strong style={{ color: C.text }}>Casa Cavour</strong> is een volledig ingericht appartement in het historisch centrum van Bertinoro — een middeleeuws bergdorp in de heuvels van de Romagna, bijgenaamd het <em>"Balkon van de Romagna"</em>. Ideaal voor stellen, thuiswerkers en gezinnen tot 4 gasten.
+                <strong style={{ color: C.text }}>Casa Cavour</strong> is een volledig ingericht appartement in het historisch centrum van Bertinoro een middeleeuws bergdorp in de heuvels van de Romagna, bijgenaamd het <em>"Balkon van de Romagna"</em>. Ideaal voor stellen, thuiswerkers en gezinnen tot 4 gasten.
               </p>
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.6px", background: C.border, marginBottom: "2rem" }}>
                 {[
@@ -363,7 +363,7 @@ function Location() {
               <h3 style={{ fontFamily: "'DM Sans',sans-serif", fontSize: "0.72rem", letterSpacing: "0.2em", textTransform: "uppercase", color: C.textSoft, marginBottom: "1.1rem" }}>WAT TE DOEN IN DE BUURT</h3>
               <div style={{ display: "flex", flexDirection: "column", gap: "0.6px", background: C.border }}>
                 {[
-                  { icon:"🍷", title:"Wijntour in de Romagna", desc:"Albana DOCG en Sangiovese — de wijngaarden liggen op 10 minuten. Historische familiaire wijnkelders." },
+                  { icon:"🍷", title:"Wijntour in de Romagna", desc:"Albana DOCG en Sangiovese de wijngaarden liggen op 10 minuten. Historische familiaire wijnkelders." },
                   { icon:"🚴", title:"Fietsen en wandelen", desc:"Fietsroutes door middeleeuwse dorpjes, olijfgaarden en panoramisch uitzicht over de Adriatische Zee." },
                   { icon:"🌅", title:"Zonsondergang op het Balkon", desc:"Het panoramaterras van Bertinoro biedt een van de mooiste zonsondergangen van de Romagna, met zicht op de Adriatische Zee." },
                   { icon:"🍝", title:"Romaanse keuken", desc:"Piadina, tagliatelle al ragu, squacquerone. Trattorias op 5 minuten waar de locals eten." },
@@ -421,7 +421,7 @@ function HowItWorks() {
             { n:"01", t:"Zoek en boek", b:"Vind ons op Airbnb. Lees recensies van gasten die de Romagna al van hieruit hebben beleefd." },
             { n:"02", t:"Wij bevestigen", b:"Ontvang volledige toegangsgegevens, lokale tips en persoonlijke suggesties voor jouw verblijf." },
             { n:"03", t:"Zelf inchecken", b:"Kom aan wanneer je wilt. De sleutels liggen klaar. Geen wachtrijen, geen receptie." },
-            { n:"04", t:"Leef als een local", b:"Ochtendmarkt, aperitivo op de heuvel, een wijnkelder zonder uithangbord. Dit is jouw Bertinoro." },
+            { n:"04", t:"Leef als een local", b:"Ochtendmarkt, aperitivo op de heuvel, een familiaire wijnkelder. Dit is jouw Bertinoro." },
           ].map(({n,t,b}) => (
             <Reveal key={n} delay={parseInt(n)*60}>
               <div style={{ padding: "2rem 1.5rem", textAlign: "center" }}>
@@ -445,7 +445,7 @@ function Testimonials() {
   const reviews = [
     { q:"We kwamen voor een weekend en bleven een week. Het appartement is prachtig en Bertinoro is een geweldige ontdekking. We hebben het aan iedereen verteld.", n:"Sophie & Marc", o:"Parijs, Frankrijk", s:5 },
     { q:"Als digitale nomade had ik betrouwbaar WiFi, een goede werkplek en schoonheid om me heen nodig. Casa Cavour leverde alles. De meest productieve maand van mijn leven.", n:"James R.", o:"Londen, VK", s:5 },
-    { q:"Het is niet zomaar een verblijf — het is een beleving. De tips van de host brachten ons naar een familiewijnkelder die niet eens op Google Maps stond.", n:"Claudia M.", o:"Munchen, Duitsland", s:5 },
+    { q:"Het is niet zomaar een verblijf; het is een beleving. De tips van de host brachten ons naar een familiewijnkelder die niet eens op Google Maps stond.", n:"Claudia M.", o:"Munchen, Duitsland", s:5 },
     { q:"Het perfecte romantische weekend. Bertinoro bij nacht is magisch, en een eigen appartement met keuken maakte alles nog specialer.", n:"Luca & Sara", o:"Milaan, Italie", s:5 },
   ];
   return (
@@ -510,7 +510,7 @@ function About() {
               Een verborgen parel,<br /><span style={{ color: C.gold, fontStyle: "italic" }}>met liefde verzorgd.</span>
             </h2>
             <p style={{ fontSize: "0.94rem", color: C.textMid, lineHeight: 1.85, fontFamily: "'DM Sans',sans-serif", marginBottom: "1rem" }}>
-              Casa Cavour ligt aan de Via Cavour, een van de oudste straten van Bertinoro — een middeleeuws bergdorp bijgenaamd het <em>"Balkon van de Romagna"</em> vanwege het panoramische uitzicht tot aan de Adriatische Zee.
+              Casa Cavour ligt aan de Via Cavour, een van de oudste straten van Bertinoro, een middeleeuws bergdorp bijgenaamd het <em>"Balkon van de Romagna"</em> vanwege het panoramische uitzicht tot aan de Adriatische Zee.
             </p>
             <p style={{ fontSize: "0.94rem", color: C.textMid, lineHeight: 1.85, fontFamily: "'DM Sans',sans-serif", marginBottom: "1.75rem" }}>
               Het appartement is ontworpen om veeleisende reizigers een thuis te bieden dat de regio waardig is. Een vakantieappartement in het historisch centrum van Bertinoro, vlakbij Cesena, ideaal voor een romantisch weekend in de heuvels van de Romagna.
