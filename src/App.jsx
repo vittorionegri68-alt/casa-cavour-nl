@@ -120,7 +120,7 @@ function Nav() {
               IT
             </a>
             <span style={{ color: C.border, fontSize: "0.7rem", alignSelf: "center" }}>|</span>
-            <a href="https://casa-cavour-en.vercel.app"
+            <a href="https://en.casa-cavour.com/"
               style={{ color: C.textSoft, textDecoration: "none", fontSize: "0.68rem", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", fontFamily: "'DM Sans',sans-serif", transition: "color 0.2s", padding: "0.2rem 0.3rem" }}
               onMouseEnter={e => e.currentTarget.style.color = C.gold}
               onMouseLeave={e => e.currentTarget.style.color = C.textSoft}>
@@ -161,7 +161,7 @@ function Nav() {
                 IT
               </a>
               <span style={{ color: C.border, fontSize: "0.75rem" }}>|</span>
-              <a href="https://casa-cavour-en.vercel.app"
+              <a href="https://en.casa-cavour.com/"
                 style={{ color: C.textSoft, textDecoration: "none", fontSize: "0.75rem", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", fontFamily: "'DM Sans',sans-serif", padding: "0.3rem 0.4rem" }}>
                 EN
               </a>
