@@ -113,7 +113,7 @@ function Nav() {
           </a>
           {/* Language switcher — desktop */}
           <div style={{ display: "flex", gap: "0.25rem", borderLeft: `1px solid ${C.border}`, paddingLeft: "1rem" }}>
-            <a href="https://casa-cavour.vercel.app"
+            <a href="https://www.casa-cavour.com/"
               style={{ color: C.textSoft, textDecoration: "none", fontSize: "0.68rem", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", fontFamily: "'DM Sans',sans-serif", transition: "color 0.2s", padding: "0.2rem 0.3rem" }}
               onMouseEnter={e => e.currentTarget.style.color = C.gold}
               onMouseLeave={e => e.currentTarget.style.color = C.textSoft}>
@@ -127,7 +127,7 @@ function Nav() {
               EN
             </a>
             <span style={{ color: C.border, fontSize: "0.7rem", alignSelf: "center" }}>|</span>
-            <a href="https://casa-cavour-nl.vercel.app"
+            <a href="https://nl.casa-cavour.com/"
               style={{ color: C.gold, textDecoration: "none", fontSize: "0.68rem", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", fontFamily: "'DM Sans',sans-serif", transition: "color 0.2s", padding: "0.2rem 0.3rem" }}
               onMouseEnter={e => e.currentTarget.style.color = C.gold}
               onMouseLeave={e => e.currentTarget.style.color = C.textSoft}>
@@ -156,7 +156,7 @@ function Nav() {
             </a>
             {/* Language switcher — mobile */}
             <div style={{ display: "flex", gap: "0.25rem", alignItems: "center" }}>
-              <a href="https://casa-cavour.vercel.app"
+              <a href="https://www.casa-cavour.com/"
                 style={{ color: C.textSoft, textDecoration: "none", fontSize: "0.75rem", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", fontFamily: "'DM Sans',sans-serif", padding: "0.3rem 0.4rem" }}>
                 IT
               </a>
@@ -166,7 +166,7 @@ function Nav() {
                 EN
               </a>
               <span style={{ color: C.border, fontSize: "0.75rem" }}>|</span>
-              <a href="https://casa-cavour-nl.vercel.app"
+              <a href="https://nl.casa-cavour.com/"
                 style={{ color: C.gold, textDecoration: "none", fontSize: "0.75rem", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", fontFamily: "'DM Sans',sans-serif", padding: "0.3rem 0.4rem" }}>
                 NL
               </a>
