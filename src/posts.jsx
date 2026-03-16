@@ -1,7 +1,6 @@
 // ── Blog (Nederlandse versie) ─────────────────────────────────────────────────
 // Voeg deze import toe bovenaan App.jsx:
 // import { posts } from "./posts.js";
-//
 // Voeg <Blog /> toe voor <FinalCTA /> in het App component
 
 function Blog() {
