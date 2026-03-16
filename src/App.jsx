@@ -610,15 +610,6 @@ function Blog() {
   );
 }
 
-function App() {
-  return (
-    <div>
-      <Blog />
-    </div>
-  );
-}
-
-export default App;
 
 // ── Final CTA ─────────────────────────────────────────────────────────────────
 function FinalCTA() {
@@ -719,6 +710,7 @@ export default function App() {
       <HowItWorks />
       <Testimonials />
       <About />
+      <Blog />
       <FinalCTA />
       <Footer />
     </>
