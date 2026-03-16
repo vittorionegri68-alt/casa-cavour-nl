@@ -1,3 +1,4 @@
+import { posts } from "./posts.js";
 import { useState, useEffect, useRef } from "react";
 import poster4 from "./assets/poster4.jpg";
 import poster3 from "./assets/poster3.jpg";
