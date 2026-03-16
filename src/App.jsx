@@ -754,9 +754,7 @@ export default function App() {
       <HowItWorks />
       <Testimonials />
       <About />
-      < />
       <FinalCTA />
       <Footer />
-    </>
   );
 }
