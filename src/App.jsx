@@ -756,5 +756,6 @@ export default function App() {
       <About />
       <FinalCTA />
       <Footer />
+    </>
   );
 }
