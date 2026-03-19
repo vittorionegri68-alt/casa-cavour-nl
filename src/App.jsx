@@ -564,12 +564,12 @@ function Blog() {
         </Reveal>
 
         {open === null && (
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))", gap: "1.5rem" }} className="blog-grid">
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))", gap: "1.5rem", alignItems: "stretch"  }} className="blog-grid">
             {visibili.map((post, i) => (
               <Reveal key={post.id} delay={i * 80}>
                 <div
                   onClick={() => setOpen(post.id)}
-                  style={{ background: C.cardBg, padding: "2rem", cursor: "pointer", transition: "all 0.3s ease", boxShadow: C.shadow }}
+                  style={{ background: C.cardBg, padding: "2rem", cursor: "pointer", height: "100%", transition: "all 0.3s ease", boxShadow: C.shadow }}
                   onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-4px)"; e.currentTarget.style.boxShadow = "0 12px 40px rgba(26,22,18,0.14)"; }}
                   onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = C.shadow; }}>
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1rem" }}>
