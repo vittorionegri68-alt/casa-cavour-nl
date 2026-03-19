@@ -8,6 +8,66 @@
 // ─────────────────────────────────────────────────────────────────────────────
  
 export const posts = [
+ // ── NIEUW POST — Giro d'Italia Cervia 2026 ───────────────────────────────
+  // Voeg dit blok toe aan de posts[] array in src/posts.js
+  // Upload ook src/assets/Cervia_1.png en src/assets/Cervia_2.png naar GitHub
+  {
+    id: "giro-italia-cervia-2026",
+    titolo: "De Giro d'Italia komt naar Cervia: beleef de etappe vanuit Casa Cavour",
+    data: "2026-04-15",
+    categoria: "Evenementen",
+    sommario: "Op 17 mei 2026 organiseert Cervia de start van etappe 9 van de Giro d'Italia 2026. Op slechts 30 minuten van Casa Cavour — een evenement dat je niet mag missen. Download onze gratis posters.",
+    contenuto: [
+      {
+        tipo: "paragrafo",
+        testo: "Op 17 mei 2026 kleurt de Riviera Romagnola roze. Cervia organiseert de start van etappe 9 van de 109e editie van de Giro d'Italia — 184 km prachtig wielrennen met een bergtop aankomst op de Corno alle Scale in de Apennijnen bij Bologna. Een etappe die beslissend belooft te zijn voor het klassement."
+      },
+      {
+        tipo: "titoletto",
+        testo: "Details van de etappe"
+      },
+      {
+        tipo: "paragrafo",
+        testo: "De officiele start (km 0) is op de Piazza Andrea Costa, waarbij het stadsgedeelte via Nazario Sauro, de Lungomare d'Annunzio, viale Roma en via Martiri Fantini loopt voordat Cervia richting de Apennijnen verlaten wordt. Dit is Cervia's vijfde deelname aan de Giro — een historische mijlpaal die de stad roze zal vieren, samen met het historische Sposalizio del Mare festival."
+      },
+      {
+        tipo: "titoletto",
+        testo: "Casa Cavour: de perfecte uitvalsbasis voor het evenement"
+      },
+      {
+        tipo: "paragrafo",
+        testo: "Bertinoro ligt op slechts 30 minuten rijden van Cervia. Verblijven in Casa Cavour betekent een comfortabele, elegante en authentieke basis hebben om dit buitengewone evenement te beleven zonder de stress van het zoeken naar accommodatie aan de kust — waar de prijzen in de dagen rond de etappe de pan uitrijzen."
+      },
+      {
+        tipo: "paragrafo",
+        testo: "Op de ochtend van 17 mei kun je de start in Cervia bijwonen, de roze sfeer van het Giro-konvooi opsnuiven en 's avonds terugkeren naar de stilte van de Romagna-heuvels met een glas Sangiovese. Het beste van twee werelden."
+      },
+      {
+        tipo: "titoletto",
+        testo: "Download onze gratis posters"
+      },
+      {
+        tipo: "paragrafo",
+        testo: "Om dit evenement te vieren hebben we twee speciale posters gemaakt voor de etappe Cervia - Corno alle Scale. Ze zijn volledig gratis te downloaden — een aandenken om te bewaren of af te drukken voor de gelegenheid."
+      },
+      {
+        tipo: "download",
+        label1: "Download Poster 1",
+        src1: "/Cervia_1.png",
+        label2: "Download Poster 2",
+        src2: "/Cervia_2.png"
+      },
+      {
+        tipo: "titoletto",
+        testo: "Praktische informatie"
+      },
+      {
+        tipo: "paragrafo",
+        testo: "Datum: zondag 17 mei 2026. Start: Piazza Andrea Costa, Cervia (RA). Aankomst: Corno alle Scale (BO). Afstand: 184 km. Etappe: 9e van de 109e editie van de Giro d'Italia."
+      }
+    ],
+    attivo: true,
+  },
   {
     id: "5-dingen-bertinoro-weekend",
     titolo: "5 dingen om te doen in Bertinoro tijdens een weekend",
