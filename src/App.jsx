@@ -547,7 +547,7 @@ function About() {
 
 function Blog() {
   const [open, setOpen] = useState(null);
-  const visibili = posts.filter(p => p.attivo);
+  const visibili = posts.filter(p => p.attivo).sort((a, b) => new Date(b.data) - new Date(a.data));
 
   return (
     <section id="blog" style={{ background: C.bg2, padding: "7rem 2rem" }}>
