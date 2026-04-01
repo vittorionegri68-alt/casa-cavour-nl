@@ -387,19 +387,8 @@ function Location() {
             </Reveal>
           </div>
         </div>
-        <Reveal delay={120}>
-          <div style={{ marginTop: "4rem", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }} className="poster-grid">
-            {[poster6, poster4].map((src,i) => (
-              <div key={i} style={{ overflow: "hidden", boxShadow: C.shadow }}>
-                <img src={src} alt="Casa Cavour poster" style={{ width: "100%", display: "block", transition: "transform 0.55s ease" }}
-                  onMouseEnter={e => e.currentTarget.style.transform="scale(1.03)"}
-                  onMouseLeave={e => e.currentTarget.style.transform="scale(1)"} />
-              </div>
-            ))}
-          </div>
-        </Reveal>
-      </div>
-      <style>{`@media(max-width:768px){.loc-grid{grid-template-columns:1fr!important;gap:2rem!important}.poster-grid{grid-template-columns:1fr!important}}`}</style>
+           </div>
+      <style>{`@media(max-width:768px){.loc-grid{grid-template-columns:1fr!important;gap:2rem!important}}`}</style>
       <DiagDivider topColor={C.bg} botColor={C.bg2} flip />
     </section>
   );
