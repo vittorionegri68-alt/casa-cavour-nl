@@ -626,6 +626,19 @@ function Blog() {
       </h3>
     );
   }
+  if (blocco.tipo === "link") {
+    const isInstagram = blocco.testo.includes("instagram");
+    const isFacebook  = blocco.testo.includes("facebook");
+    const label = isInstagram ? "📸 Instagram" : isFacebook ? "👍 Facebook" : "🔗 Link";
+    return (
+      <a key={i} href={blocco.testo} target="_blank" rel="noopener noreferrer"
+        style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: "transparent", color: C.gold, padding: "0.6rem 1.2rem", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none", fontFamily: "'DM Sans',sans-serif", border: `1.5px solid ${C.gold}`, marginRight: "0.75rem", marginBottom: "0.5rem", transition: "all 0.2s" }}
+        onMouseEnter={e => { e.currentTarget.style.background = C.gold; e.currentTarget.style.color = "#fff"; }}
+        onMouseLeave={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = C.gold; }}>
+        {label} ↗
+      </a>
+    );
+  }
   if (blocco.tipo === "download") {
     return (
       <div key={i} style={{ display: "flex", gap: "1rem", flexWrap: "wrap", margin: "1.5rem 0" }}>
