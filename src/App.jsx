@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { posts } from "./posts.jsx";
+import { posts } from "./posts.js";
 import poster4 from "./assets/poster4.jpg";
 import poster3 from "./assets/poster3.jpg";
 import poster6 from "./assets/poster6.jpg";
@@ -528,18 +528,29 @@ function About() {
     </section>
   );
 }
-// ── Blog (Nederlandse versie) ─────────────────────────────────────────────────
-// Voeg deze import toe bovenaan App.jsx:
-// import { posts } from "./posts.js";
-//
-// Voeg <Blog /> toe voor <FinalCTA /> in het App component
-
+// ── Blog ─────────────────────────────────────────────────────────────────────
 function Blog() {
   const [open, setOpen] = useState(null);
   const visibili = posts.filter(p => p.attivo).sort((a, b) => new Date(b.data) - new Date(a.data));
+  const sectionRef = useRef(null);
+
+  const handleApri = (id) => {
+    setOpen(id);
+    setTimeout(() => {
+      if (sectionRef.current) sectionRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 50);
+  };
+  const handleChiudi = () => {
+    setOpen(null);
+    setTimeout(() => {
+      if (sectionRef.current) sectionRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 50);
+  };
+
+  if (visibili.length === 0) return null;
 
   return (
-    <section id="blog" style={{ background: C.bg2, padding: "7rem 2rem" }}>
+    <section id="blog" ref={sectionRef} style={{ background: C.bg2, padding: "7rem 2rem" }}>
       <div style={{ maxWidth: 1200, margin: "0 auto" }}>
         <Reveal>
           <div style={{ marginBottom: "3.5rem" }}>
@@ -557,8 +568,8 @@ function Blog() {
             {visibili.map((post, i) => (
               <Reveal key={post.id} delay={i * 80}>
                 <div
-                  onClick={() => setOpen(post.id)}
-                  style={{ background: C.cardBg, padding: "2rem", cursor: "pointer", height: "100%", transition: "all 0.3s ease", boxShadow: C.shadow }}
+                  onClick={() => handleApri(post.id)}
+                  style={{ background: C.cardBg, padding: "2rem", cursor: "pointer", height: "100%", boxSizing: "border-box", transition: "all 0.3s ease", boxShadow: C.shadow, display: "flex", flexDirection: "column" }}
                   onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-4px)"; e.currentTarget.style.boxShadow = "0 12px 40px rgba(26,22,18,0.14)"; }}
                   onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = C.shadow; }}>
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1rem" }}>
@@ -591,7 +602,7 @@ function Blog() {
             <Reveal>
               <div style={{ maxWidth: 760, margin: "0 auto" }}>
                 <button
-                  onClick={() => setOpen(null)}
+                  onClick={handleChiudi}
                   style={{ background: "none", border: `1px solid ${C.border}`, padding: "0.45rem 1rem", fontSize: "0.72rem", color: C.textMid, fontFamily: "'DM Sans',sans-serif", letterSpacing: "0.1em", textTransform: "uppercase", cursor: "pointer", marginBottom: "2.5rem", transition: "all 0.2s" }}
                   onMouseEnter={e => { e.currentTarget.style.borderColor = C.gold; e.currentTarget.style.color = C.gold; }}
                   onMouseLeave={e => { e.currentTarget.style.borderColor = C.border; e.currentTarget.style.color = C.textMid; }}>
