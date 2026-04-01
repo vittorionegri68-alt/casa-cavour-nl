@@ -11,6 +11,73 @@ export const posts = [
  // ── NIEUW POST — Giro d'Italia Cervia 2026 ───────────────────────────────
   // Voeg dit blok toe aan de posts[] array in src/posts.js
   // Upload ook src/assets/Cervia_1.png en src/assets/Cervia_2.png naar GitHub
+{
+  id: "April in Romagna",
+  titolo: "April is de perfecte maand om het culturele Romagna te ontdekken, ver van de zomerdrukte.",
+  data: "2026-04-01",
+  categoria: "Evenementen",
+  sommario: "Dacht je dat middeleeuwse dorpjes openluchtmusea zijn die je alleen in de zomer bezoekt?",
+  contenuto: [
+    {
+      tipo: "paragrafo",
+      testo: "Denk nog eens na. April is de perfecte maand om het culturele Romagna te ontdekken, ver van de zomerdrukte."
+    },
+    {
+      tipo: "titoletto",
+      testo: "De heuvels van Romagna"
+    },
+    {
+      tipo: "paragrafo",
+      testo: "De heuvels van Romagna ontwaken. De steegjes van Bertinoro, Longiano en Verucchio vullen zich met voorjaarslicht. Aangenaam weer, geen wachtrijen, en eindelijk kun je echt praten met de mensen die er wonen."
+    },
+    {
+      tipo: "titoletto",
+      testo: "Casa Cavour: het perfecte vertrekpunt voor een april-weekend"
+    },
+    {
+      tipo: "paragrafo",
+      testo: "April 2026 brengt een Romagna dat fors investeert in cultuur. De Regio heeft 34 miljoen euro vrijgemaakt om niet alleen de Riviera, maar ook het binnenland te promoten."
+    },
+    {
+      tipo: "paragrafo",
+      testo: "Het resultaat? Meer evenementen in de dorpen, betere toegankelijkheid en meer aandacht voor kleine gemeenten."
+    },
+    {
+      tipo: "paragrafo",
+      testo: "In Bertinoro heropent Castello Malaspina met rondleidingen elk weekend (€5, reservering aanbevolen). Van daaruit strekt het uitzicht zich uit langs de kust tot aan Rimini."
+    },
+    {
+      tipo: "paragrafo",
+      testo: "Longiano herbergt het Italiaans Gietijzermuseum en de Fondazione Tito Balestra — hedendaagse kunst in een dorp dat ruikt naar steen en blauweregen."
+    },
+    {
+      tipo: "paragrafo",
+      testo: "Verucchio, geboorteplaats van de familie Malatesta, herbergt een van de meest bijzondere archeologische musea van de regio. Vanuit Casa Cavour is Longiano slechts 15 minuten rijden, Verucchio 20."
+    },
+    {
+      tipo: "paragrafo",
+      testo: "Pasen in Romagna draait dit jaar niet alleen om de zee. Het is geschiedenis, het is kunst, het is ontdekken dat achter elke deur een verhaal schuilt dat geen enkele toeristische folder ooit vertelt."
+    },
+    {
+      tipo: "titoletto",
+      testo: "Volg ons op sociale media"
+    },
+    {
+      tipo: "paragrafo",
+      testo: "Elke week delen we culturele, culinaire en toeristische informatie over Romagna op onze sociale kanalen."
+    },
+    {
+      tipo: "link",
+      testo: "https://www.instagram.com/bnb_bertinoro/"
+    },
+    {
+      tipo: "link",
+      testo: "https://www.facebook.com/profile.php?id=61577458010505"
+    }
+  ],
+  attivo: true,
+},
+ 
   {
     id: "giro-italia-cervia-2026",
     titolo: "De Giro d'Italia komt naar Cervia: beleef de etappe vanuit Casa Cavour",
