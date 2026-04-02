@@ -11,6 +11,31 @@ export const posts = [
  // ── NIEUW POST — Giro d'Italia Cervia 2026 ───────────────────────────────
   // Voeg dit blok toe aan de posts[] array in src/posts.js
   // Upload ook src/assets/Cervia_1.png en src/assets/Cervia_2.png naar GitHub
+
+{
+  id: "pasen-romagna-2026",
+  titolo: "Pasen in Romagna 2026: heuveldorpen, rustige kust en tradities",
+  data: "2026-04-01",
+  categoria: "itineraries",
+  sommario: "Pasen en de eerste lange weekenden van het voorjaar zijn het perfecte moment om Romagna buiten het hoogseizoen te ontdekken. Tussen middeleeuwse heuveldorpen, een nog rustige Riviera en de eerste lokale festivals: zo beleef je een authentiek weekend in Bertinoro, Ravenna en aan de Romagnaanse kust.",
+  contenuto: [
+    { tipo: "paragrafo", testo: "April 2026 brengt Pasen en de eerste echte lenteweekendes. Romagna ontwaakt na de winter, maar zonder zomerdrukte: heuveldorpen liggen er nog stil bij, de Riviera biedt strandwandelingen in frisse lucht en in de osterias hangt de geur van wilde kruiden en de eerste asperges. Het is de beste tijd voor wie op zoek is naar een authentieke ervaring, ver van het hoogseizoenritme." },
+
+    { tipo: "titoletto", testo: "Bertinoro en de heuvels: wijngaarden en stille dorpen" },
+    { tipo: "paragrafo", testo: "Bertinoro in april is een klein juweel. De wijngaarden beginnen uit te lopen, de steegjes van het historische centrum zijn bij zonsondergang verlaten en de Rocca Malatestiana biedt uitzicht tot aan de zee. Van hieruit leiden wandel- en fietsroutes naar Polenta, Fratta Terme en de omliggende heuvels. Het paasweekend is perfect voor een wandeling naar het Santuario della Madonna del Lago (45 minuten te voet) of een lunch in een van de historische osterias in het dorp. Praktische tip: vermijd zaterdagmiddag als je de plekken voor jezelf wilt." },
+
+    { tipo: "titoletto", testo: "Ravenna: mozaieken, dennenbossen en Byzantijns Pasen" },
+    { tipo: "paragrafo", testo: "Ravenna is in april minder druk dan in de zomer, maar biedt dezelfde intensiteit. De mozaieken in San Vitale en het Mausoleum van Galla Placidia lijken nog feller te stralen in het lentelicht dat door de ramen valt. In de paasperiode zijn er ook concerten met gewijde muziek in de basilieken en ambachtsmarkten in kloostergangen. Na een cultureel bezoek is een wandeling in de Pineta di Classe een must (10 minuten rijden van het centrum): stil, geurend naar dennenhars, perfect voor wie rust zoekt. Praktische info: musea zijn open op zowel eerste als tweede paasdag, gecombineerd ticket €12 voor 5 UNESCO-monumenten." },
+
+    { tipo: "titoletto", testo: "De Riviera van Romagna buiten het seizoen: zee zonder strandcabines" },
+    { tipo: "paragrafo", testo: "Cesenatico, Rimini en Riccione zijn in april onherkenbaar. Geen strandcabines, nauwelijks auto s, alleen open zee en lege stranden. Het is de beste tijd voor een fietstocht langs de boulevard, een wandeling bij het Porto Canale van Cesenatico (met historische boten die nog afgemeerd liggen) of een aperitivo bij zonsondergang zonder te reserveren. Het lange paasweekend brengt enkele evenementen mee - ambachtsmarkten, concerten in historische centra - maar niets van de zomerchaos. Praktisch advies: veel restaurants aan zee heropenen precies met Pasen, maar voor de paaslunch reserveren is wel aangeraden." },
+
+    { tipo: "titoletto", testo: "Wat meenemen naar huis: seizoensproducten" },
+    { tipo: "paragrafo", testo: "April in Romagna betekent wilde asperges, veldkruiden, de eerste verse squacquerone-kaas en net gebottelde witte wijnen. Boerenmarkten (Cesena op woensdag- en zaterdagochtend, Bertinoro op zondag) zijn de juiste plek om in te slaan. Als je langs Longiano of Bertinoro rijdt, stop dan bij een wijnhuis dat open is: veel producenten bieden ook zonder reservering proeverijen aan, zeker in feestelijke weekenden." },
+  ],
+  attivo: true,
+},
+ 
 {
   id: "April in Romagna",
   titolo: "April is de perfecte maand om het culturele Romagna te ontdekken, ver van de zomerdrukte.",
