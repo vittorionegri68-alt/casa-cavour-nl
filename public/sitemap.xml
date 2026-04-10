@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <!-- Italian version (primary) -->
   <url>
     <loc>https://www.casa-cavour.com/</loc>
-    <lastmod>2025-03-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.casa-cavour.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://en.casa-cavour.com/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nl.casa-cavour.com/"/>
+    <lastmod>2026-04-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -12,7 +16,10 @@
   <!-- English version -->
   <url>
     <loc>https://en.casa-cavour.com/</loc>
-    <lastmod>2025-03-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.casa-cavour.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://en.casa-cavour.com/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nl.casa-cavour.com/"/>
+    <lastmod>2026-04-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -20,7 +27,10 @@
   <!-- Dutch version -->
   <url>
     <loc>https://nl.casa-cavour.com/</loc>
-    <lastmod>2025-03-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.casa-cavour.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://en.casa-cavour.com/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nl.casa-cavour.com/"/>
+    <lastmod>2026-04-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
