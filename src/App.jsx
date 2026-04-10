@@ -168,13 +168,13 @@ function Hero() {
           <div style={{ flex: "1 1 320px", minWidth: 0 }}>
             <div style={{ opacity: loaded?1:0, transform: loaded?"translateY(0)":"translateY(18px)", transition: "all 0.7s ease 0.15s", display: "flex", alignItems: "center", gap: "0.8rem", marginBottom: "1.3rem" }}>
               <span style={{ display: "inline-block", width: 32, height: 1, background: C.gold }} />
-              <span style={{ fontSize: "0.67rem", letterSpacing: "0.28em", color: C.gold, textTransform: "uppercase", fontFamily: "'DM Sans',sans-serif" }}>Bertinoro · Emilia-Romagna · B&amp;B</span>
+              <span style={{ fontSize: "0.67rem", letterSpacing: "0.28em", color: C.gold, textTransform: "uppercase", fontFamily: "'DM Sans',sans-serif" }}>Bertinoro · Heuvels van de Romagna · Forlì-Cesena</span>
             </div>
             <h1 style={{ opacity: loaded?1:0, transform: loaded?"translateY(0)":"translateY(28px)", transition: "all 0.85s ease 0.3s", fontFamily: "'Cormorant Garamond','Playfair Display',serif", fontSize: "clamp(2.6rem,5.5vw,5rem)", fontWeight: 700, color: C.text, lineHeight: 1.04, letterSpacing: "-0.02em", margin: "0 0 1.2rem" }}>
               Beleef de Romagna<br /><span style={{ color: C.gold, fontStyle: "italic" }}>als een local.</span>
             </h1>
             <p style={{ opacity: loaded?1:0, transform: loaded?"translateY(0)":"translateY(24px)", transition: "all 0.85s ease 0.46s", fontSize: "clamp(0.93rem,1.8vw,1.08rem)", color: C.textMid, lineHeight: 1.82, margin: "0 0 2rem", fontFamily: "'DM Sans',sans-serif" }}>
-              Een designappartement in het historische centrum van Bertinoro — het <em style={{ color: C.text }}>"Balkon van de Romagna"</em>. Voor koppels, professionals en reizigers die op zoek zijn naar authenticiteit, comfort en echte verbinding met de streek.
+              Vakantiewoning met volledig ingerichte keuken in het historische centrum van Bertinoro — het <em style={{ color: C.text }}>"Balkon van de Romagna"</em>, in de heuvels van de Romagna (Forlì-Cesena). De ideale uitvalsbasis voor een romantisch weekend, wijntoerisme in de Romagna of een welverdiende pauze van de dagelijkse drukte — op slechts 60 min van Bologna.
             </p>
             <div style={{ opacity: loaded?1:0, transform: loaded?"translateY(0)":"translateY(24px)", transition: "all 0.85s ease 0.6s", display: "flex", gap: "1rem", flexWrap: "wrap" }}>
               <a href="https://airbnb.com/h/casacavour-bertinoro" target="_blank" rel="noopener noreferrer"
@@ -190,7 +190,7 @@ function Hero() {
               </a>
             </div>
             <div style={{ opacity: loaded?1:0, transition: "opacity 0.8s ease 0.78s", display: "flex", gap: "2rem", marginTop: "2.5rem", paddingTop: "1.75rem", borderTop: `1px solid ${C.border}`, flexWrap: "wrap" }}>
-              {[["★★★★★","Airbnb beoordeling"],["4","Max gasten"],["15 min","van Cesena"],["35 min","van San Marino"]].map(([v,l]) => (
+              {[["★★★★★","Airbnb beoordeling"],["4","Max gasten"],["15 min","van Cesena"],["60 min","van Bologna"]].map(([v,l]) => (
                 <div key={l}>
                   <div style={{ fontFamily: "'Cormorant Garamond','Playfair Display',serif", fontSize: "1.3rem", color: C.gold, fontWeight: 700 }}>{v}</div>
                   <div style={{ fontSize: "0.66rem", color: C.textSoft, letterSpacing: "0.1em", textTransform: "uppercase", fontFamily: "'DM Sans',sans-serif", marginTop: 2 }}>{l}</div>
@@ -250,7 +250,7 @@ function Apartment() {
                 Jouw thuis<br /><span style={{ color: C.gold, fontStyle: "italic" }}>vanaf dag een.</span>
               </h2>
               <p style={{ fontSize: "0.94rem", color: C.textMid, lineHeight: 1.85, fontFamily: "'DM Sans',sans-serif", marginBottom: "1.2rem" }}>
-                <strong style={{ color: C.text }}>Casa Cavour</strong> is een volledig ingericht appartement in het historische centrum van Bertinoro — een middeleeuws heuvelstadje in de Romagna, bijgenaamd het <em>"Balkon van de Romagna"</em>. Ideaal voor koppels, thuiswerkers en gezinnen tot 4 personen.
+                <strong style={{ color: C.text }}>Casa Cavour</strong> is een vakantieappartement met volledig ingerichte keuken in het historische centrum van Bertinoro (FC) — een middeleeuws heuvelstadje in de Romagna, bijgenaamd het <em>"Balkon van de Romagna"</em>. Ideaal voor een romantisch weekend, wijntoerisme of een verfrissende break weg van de stad. Tot 4 personen.
               </p>
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.6px", background: C.border, marginBottom: "2rem" }}>
                 {[
@@ -336,7 +336,7 @@ function Location() {
               <h3 style={{ fontFamily: "'DM Sans',sans-serif", fontSize: "0.72rem", letterSpacing: "0.2em", textTransform: "uppercase", color: C.textSoft, marginBottom: "1.1rem" }}>WAT TE DOEN IN DE BUURT</h3>
               <div style={{ display: "flex", flexDirection: "column", gap: "0.6px", background: C.border }}>
                 {[
-                  { icon:"🍷", title:"Wijntour in de Romagna", desc:"Albana DOCG en Sangiovese — de wijngaarden liggen op 10 minuten. Historische wijnkelders." },
+                  { icon:"🍷", title:"Wijntoerisme in de Romagna", desc:"Albana DOCG en Sangiovese di Romagna — wijngaarden op 10 minuten. Historische wijnkelders, proeverijen en de Strada dei Vini. Perfect voor een gastronomisch weekend." },
                   { icon:"🚴", title:"Fietsen & Wandelpaden", desc:"Heuvelachtige fietsroutes door middeleeuwse dorpjes, olijfgaarden en Adriatische panoramas." },
                   { icon:"🌅", title:"Zonsondergang op het Balkon", desc:"Het panoramaterras van Bertinoro biedt een van de mooiste zonsondergangen van de Romagna, met uitzicht op de Adriatische Zee." },
                   { icon:"🍝", title:"Romagnolische Keuken", desc:"Piadina, tagliatelle al ragu, squacquerone. Trattorias op 5 min waar de locals eten." },
@@ -471,7 +471,7 @@ function About() {
               Casa Cavour ligt aan de Via Cavour, een van de oudste straten van Bertinoro, een middeleeuws heuvelstadje bijgenaamd het <em>"Balkon van de Romagna"</em> vanwege het panoramische uitzicht tot aan de Adriatische Zee.
             </p>
             <p style={{ fontSize: "0.94rem", color: C.textMid, lineHeight: 1.85, fontFamily: "'DM Sans',sans-serif", marginBottom: "1.75rem" }}>
-              Het appartement is ontworpen om veeleisende reizigers een thuis te bieden dat recht doet aan de regio. Een vakantiewoning in het historische centrum van Bertinoro, nabij Cesena, ideaal voor romantische weekendjes in de heuvels van de Romagna.
+              Het appartement is ontworpen voor wie de authentieke Romagna wil beleven: korte verhuur met ingerichte keuken, ideaal voor koppels die een romantisch weekend zoeken, liefhebbers van wijntoerisme en iedereen die Bertinoro wil gebruiken als uitvalsbasis voor de Romagna, de kust en de middeleeuwse dorpen van Emilia-Romagna.
             </p>
             <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
               {[
@@ -479,7 +479,9 @@ function About() {
                 "35 min van de Republiek San Marino",
                 "40 min van Rimini en de Adriatische Riviera",
                 "Directe toegang tot de Wijn- en Smakenroute",
-                "Op loopafstand van de beste restaurants en wijnkelders van de Romagna",
+                "Directe toegang tot de Wijnroute: Sangiovese, Albana DOCG en historische wijnkelders op 10 min",
+                "Ideale uitvalsbasis voor Forlì, Cesena, Ravenna, San Marino en de Adriatische Riviera",
+                "Op loopafstand van de beste osterie en authentieke restaurants van de Romagna",
               ].map(item => (
                 <div key={item} style={{ display: "flex", alignItems: "flex-start", gap: "0.6rem" }}>
                   <span style={{ color: C.gold, fontSize: "0.6rem", marginTop: "0.3rem", flexShrink: 0 }}>◆</span>
@@ -714,7 +716,7 @@ function Footer() {
               Via Cavour · Bertinoro (FC)<br />Emilia-Romagna · Italie 47032
             </div>
             <div style={{ fontFamily: "'DM Sans',sans-serif", fontSize: "0.76rem", color: C.textSoft, lineHeight: 1.7 }}>
-              Vakantiewoning in het historische centrum van Bertinoro.<br />Nabij Cesena, Rimini, San Marino.
+              Korte verhuur in het historische centrum van Bertinoro, heuvels van de Romagna (FC).<br />Ideale uitvalsbasis voor wijntoerisme, romantische weekends en ontspanning in de Romagna.
             </div>
           </div>
           <div>
