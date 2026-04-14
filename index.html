@@ -51,19 +51,39 @@
       });
     </script>
 
-    <!-- Structured data — LodgingBusiness + ApartmentComplex -->
+    <!-- Structured data — LodgingBusiness -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "LodgingBusiness",
+      "@type": ["LodgingBusiness", "Accommodation"],
+      "@id": "https://www.casa-cavour.com/#lodging",
       "name": "Casa Cavour Bertinoro",
       "alternateName": "Casa Cavour",
+      "accommodationCategory": "Apartment",
       "description": "Design vakantieappartement met volledig ingerichte keuken in het historische centrum van Bertinoro, in de heuvels van de Romagna (Forlì-Cesena). Bijgenaamd het Balkon van de Romagna vanwege het panoramische uitzicht over de Po-vlakte en de Adriatische kust. Ideale uitvalsbasis voor romantische weekends, wijntoerisme langs de wijnkelders van de Romagna (Sangiovese, Albana DOCG) en authentieke verblijven weg van de dagelijkse drukte. Op 15 min van Cesena, 20 min van Forlì, 40 min van Rimini, 35 min van San Marino, 60 min van Bologna.",
       "url": "https://nl.casa-cavour.com",
       "image": [
-        "https://www.casa-cavour.com/og-image.jpg",
-        "https://www.casa-cavour.com/assets/Giardino_2-BaaXyxQR.jpg"
+        {
+          "@type": "ImageObject",
+          "@id": "https://www.casa-cavour.com/#image-og",
+          "url": "https://www.casa-cavour.com/og-image.jpg",
+          "contentUrl": "https://www.casa-cavour.com/og-image.jpg",
+          "name": "Casa Cavour Bertinoro — Buitenzicht",
+          "width": 1200,
+          "height": 630
+        },
+        {
+          "@type": "ImageObject",
+          "@id": "https://www.casa-cavour.com/#image-tuin",
+          "url": "https://www.casa-cavour.com/assets/Giardino_2-BaaXyxQR.jpg",
+          "contentUrl": "https://www.casa-cavour.com/assets/Giardino_2-BaaXyxQR.jpg",
+          "name": "Casa Cavour Bertinoro — Privétuin"
+        }
       ],
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.casa-cavour.com/og-image.jpg"
+      },
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Via Cavour, 44",
@@ -74,11 +94,17 @@
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": "44.150444",
-        "longitude": "12.136917"
+        "latitude": 44.150444,
+        "longitude": 12.136917
       },
-      "hasMap": "https://maps.google.com/?q=44.150444,12.136917",
       "telephone": "+393925200650",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+393925200650",
+        "email": "vittorionegri68@gmail.com",
+        "contactType": "reservations",
+        "availableLanguage": ["Italian", "English", "Dutch"]
+      },
       "amenityFeature": [
         { "@type": "LocationFeatureSpecification", "name": "Gratis WiFi", "value": true },
         { "@type": "LocationFeatureSpecification", "name": "Volledig ingerichte keuken", "value": true },
@@ -94,10 +120,11 @@
         { "@type": "LocationFeatureSpecification", "name": "Beddengoed en handdoeken inbegrepen", "value": true },
         { "@type": "LocationFeatureSpecification", "name": "Strijkijzer", "value": true }
       ],
-      "checkinTime": "16:00",
-      "checkoutTime": "10:00",
-      "numberOfRooms": 2,
+      "checkinTime": "T16:00:00",
+      "checkoutTime": "T10:00:00",
+      "numberOfRooms": 4,
       "numberOfBedrooms": 2,
+      "numberOfBathroomsTotal": 1,
       "occupancy": {
         "@type": "QuantitativeValue",
         "minValue": 1,
@@ -118,25 +145,41 @@
         "priceCurrency": "EUR",
         "priceSpecification": {
           "@type": "UnitPriceSpecification",
-          "price": "70",
+          "price": 70,
           "priceCurrency": "EUR",
-          "unitText": "nacht"
+          "unitText": "nacht",
+          "description": "Basistarief per nacht (laagseizoen)",
+          "validFrom": "2026-01-01",
+          "validThrough": "2026-12-31"
         },
         "availability": "https://schema.org/InStock"
       },
       "tourBookingPage": "https://www.airbnb.com/rooms/1374591120957342823",
-      "identifier": "IT040003C28FEZ8O7L",
+      "identifier": {
+        "@type": "PropertyValue",
+        "name": "CIR",
+        "value": "IT040003C28FEZ8O7L"
+      },
       "containedInPlace": {
         "@type": "AdministrativeArea",
         "name": "Forlì-Cesena"
       },
-      "touristType": ["Koppels", "Cultuurtoerist", "Wijn- en gastronomietoerist", "Remote worker"],
-      "inLanguage": ["it", "en", "nl"],
       "sameAs": [
-        "https://airbnb.com/h/casacavour-bertinoro",
         "https://www.airbnb.com/rooms/1374591120957342823",
         "https://www.instagram.com/bnb_bertinoro/",
         "https://www.facebook.com/profile.php?id=61577458010505"
+      ]
+    }
+    </script>
+
+    <!-- Structured data — BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://nl.casa-cavour.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Vakantiewoning Bertinoro", "item": "https://nl.casa-cavour.com/" }
       ]
     }
     </script>
