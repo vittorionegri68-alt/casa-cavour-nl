@@ -713,18 +713,18 @@ function Footer() {
               <div style={{ fontFamily: "'Cormorant Garamond','Playfair Display',serif", fontSize: "1.1rem", color: C.gold, letterSpacing: "0.08em", fontWeight: 700 }}>CASA CAVOUR</div>
             </div>
             <div style={{ fontFamily: "'DM Sans',sans-serif", fontSize: "0.82rem", color: C.textMid, lineHeight: 1.75, marginBottom: "0.65rem" }}>
-              Via Cavour · Bertinoro (FC)<br />Emilia-Romagna · Italie 47032
+              Via Cavour · Bertinoro (FC)<br />Emilia-Romagna · Italië 47032
             </div>
             <div style={{ fontFamily: "'DM Sans',sans-serif", fontSize: "0.76rem", color: C.textSoft, lineHeight: 1.7 }}>
-              Korte verhuur in het historische centrum van Bertinoro, heuvels van de Romagna (FC).<br />Ideale uitvalsbasis voor wijntoerisme, romantische weekends en ontspanning in de Romagna.
+              Kortetermijnverhuur in het historische centrum van Bertinoro, Romagnaheuvels (FC).<br />Ideale uitvalsbasis voor wijntoerisme, romantische weekends en ontspanning in Romagna.
             </div>
           </div>
           <div>
             <div style={{ fontSize: "0.67rem", letterSpacing: "0.18em", textTransform: "uppercase", color: C.textSoft, fontFamily: "'DM Sans',sans-serif", marginBottom: "0.85rem" }}>Navigeer</div>
-            {[["Appartement","appartement"],["Locatie","locatie"],["Ervaringen","ervaringen"],["Recensies","recensies"],["Blog","blog"]].map(([l,id]) => (
-              <a key={l} href={`#${id}`} style={{ display: "block", color: C.textMid, textDecoration: "none", fontSize: "0.83rem", fontFamily: "'DM Sans',sans-serif", marginBottom: "0.5rem", transition: "color 0.2s" }}
+            {[["Appartement","appartement"],["Locatie","locatie"],["Ervaringen","ervaringen"],["Reviews","reviews"],["Blog","blog"],["FAQ","qa"]].map(([label, anchor]) => (
+              <a key={anchor} href={`#${anchor}`} style={{ display: "block", color: C.textMid, textDecoration: "none", fontSize: "0.83rem", fontFamily: "'DM Sans',sans-serif", marginBottom: "0.5rem", transition: "color 0.2s" }}
                 onMouseEnter={e => e.target.style.color=C.gold} onMouseLeave={e => e.target.style.color=C.textMid}>
-                {l}
+                {label}
               </a>
             ))}
           </div>
@@ -741,6 +741,10 @@ function Footer() {
         </div>
         <div style={{ borderTop: `1px solid ${C.border}`, paddingTop: "1.5rem", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "0.75rem" }}>
           <div style={{ fontSize: "0.72rem", color: C.textSoft, fontFamily: "'DM Sans',sans-serif" }}>© {new Date().getFullYear()} Casa Cavour · Bertinoro · Alle rechten voorbehouden</div>
+          <a href="/privacy.html" style={{ fontSize: "0.72rem", color: C.textSoft, fontFamily: "'DM Sans',sans-serif", textDecoration: "none", transition: "color 0.2s" }}
+            onMouseEnter={e => e.target.style.color=C.gold} onMouseLeave={e => e.target.style.color=C.textSoft}>
+            Privacy Policy
+          </a>
           <div style={{ fontSize: "0.72rem", color: C.textSoft, fontFamily: "'DM Sans',sans-serif", letterSpacing: "0.1em" }}>MET ♥ IN ROMAGNA</div>
         </div>
       </div>
@@ -748,7 +752,6 @@ function Footer() {
     </footer>
   );
 }
-
 export default function App() {
   return (
     <>
