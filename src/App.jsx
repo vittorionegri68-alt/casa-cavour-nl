@@ -415,10 +415,10 @@ function Testimonials() {
         </Reveal>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(260px,1fr))", gap: "1.5px", background: C.border }}>
           {[
-            { q:"We kwamen voor een weekend en bleven een week. Het appartement is prachtig en Bertinoro is een ongelooflijke ontdekking. We hebben het aan iedereen verteld.", n:"Sophie & Marc", o:"Parijs, Frankrijk", s:5 },
-            { q:"Als digitale nomade zocht ik betrouwbare WiFi, werkruimte en schoonheid om me heen. Casa Cavour voldeed aan alles. De meest productieve maand van mijn leven.", n:"James R.", o:"Londen, VK", s:5 },
-            { q:"Het is niet zomaar een verblijf — het is een ervaring. De tips van de host brachten ons naar een familiewijnkelder die niet eens op Google Maps stond.", n:"Claudia M.", o:"Munchen, Duitsland", s:5 },
-            { q:"Perfect romantisch weekend. Bertinoro bij avond is magisch, en ons eigen appartement met keuken maakte alles nog specialer.", n:"Luca & Sara", o:"Milaan, Italie", s:5 },
+{ q:"Een zeer mooi klein appartement, zeer goed onderhouden in een klein dorpje op een heuveltop. Ideaal voor twee koppels. Geweldig als je komt voor de jaarlijkse CISSR-conferentie! De keuken is uitstekend en goed uitgerust.", n:"Kate", o:"Baltimore, Maryland", s:5 },
+{ q:"Cesare is een geweldige host, je kunt bijna alles met hem regelen wat je maar wilt, en de plek overtrof echt onze verwachtingen. We hebben een geweldige tijd gehad en komen zeker terug :)", n:"Blaženka", o:"Kroatië", s:5 },
+{ q:"We kwamen toevallig in Bertinoro terecht en het was een aangename verrassing: een mooi dorp, zeer rustig, met een prachtig uitzicht tot aan de zee. Uitstekende keuken tegen betaalbare prijzen, typische Romagna-gastvrijheid. Zeer vriendelijke host, altijd aanwezig en snel in reageren; een zeer mooi en karakteristiek appartement, verdeeld over drie verdiepingen met prachtig uitzicht op het dorp. Echt zeer tevreden over het verblijf.", n:"Maria Ilaria", o:"Italië", s:5 },
+{ q:"We voelden ons zeer op ons gemak in de kleine rijtjeshuizen van Cesare. Alles wat we nodig hadden voor ons verblijf van twee dagen was aanwezig, en leuke restaurants lagen op een steenworp afstand. De dame met wie je de achtertuin deelt is erg vriendelijk. We komen graag terug wanneer we weer in de buurt zijn.", n:"Laura", o:"Italië", s:5 },
           ].map(({q,n,o,s}) => (
             <Reveal key={n} delay={80}>
               <div style={{ background: C.cardBg, padding: "2.25rem", height: "100%", boxSizing: "border-box", transition: "background 0.3s" }}
