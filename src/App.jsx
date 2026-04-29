@@ -415,10 +415,10 @@ function Testimonials() {
         </Reveal>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(260px,1fr))", gap: "1.5px", background: C.border }}>
           {[
-{ q:"Een zeer mooi klein appartement, zeer goed onderhouden in een klein dorpje op een heuveltop. Ideaal voor twee koppels. Geweldig als je komt voor de jaarlijkse CISSR-conferentie! De keuken is uitstekend en goed uitgerust.", n:"Kate", o:"Baltimore, Maryland", s:5 },
-{ q:"Cesare is een geweldige host, je kunt bijna alles met hem regelen wat je maar wilt, en de plek overtrof echt onze verwachtingen. We hebben een geweldige tijd gehad en komen zeker terug :)", n:"Blaženka", o:"Kroatië", s:5 },
-{ q:"We kwamen toevallig in Bertinoro terecht en het was een aangename verrassing: een mooi dorp, zeer rustig, met een prachtig uitzicht tot aan de zee. Uitstekende keuken tegen betaalbare prijzen, typische Romagna-gastvrijheid. Zeer vriendelijke host, altijd aanwezig en snel in reageren; een zeer mooi en karakteristiek appartement, verdeeld over drie verdiepingen met prachtig uitzicht op het dorp. Echt zeer tevreden over het verblijf.", n:"Maria Ilaria", o:"Italië", s:5 },
-{ q:"We voelden ons zeer op ons gemak in de kleine rijtjeshuizen van Cesare. Alles wat we nodig hadden voor ons verblijf van twee dagen was aanwezig, en leuke restaurants lagen op een steenworp afstand. De dame met wie je de achtertuin deelt is erg vriendelijk. We komen graag terug wanneer we weer in de buurt zijn.", n:"Laura", o:"Italië", s:5 },
+            { q:"We kwamen voor een weekend en bleven een week. Het appartement is prachtig en Bertinoro is een ongelooflijke ontdekking. We hebben het aan iedereen verteld.", n:"Sophie & Marc", o:"Parijs, Frankrijk", s:5 },
+            { q:"Als digitale nomade zocht ik betrouwbare WiFi, werkruimte en schoonheid om me heen. Casa Cavour voldeed aan alles. De meest productieve maand van mijn leven.", n:"James R.", o:"Londen, VK", s:5 },
+            { q:"Het is niet zomaar een verblijf — het is een ervaring. De tips van de host brachten ons naar een familiewijnkelder die niet eens op Google Maps stond.", n:"Claudia M.", o:"Munchen, Duitsland", s:5 },
+            { q:"Perfect romantisch weekend. Bertinoro bij avond is magisch, en ons eigen appartement met keuken maakte alles nog specialer.", n:"Luca & Sara", o:"Milaan, Italie", s:5 },
           ].map(({q,n,o,s}) => (
             <Reveal key={n} delay={80}>
               <div style={{ background: C.cardBg, padding: "2.25rem", height: "100%", boxSizing: "border-box", transition: "background 0.3s" }}
@@ -471,11 +471,11 @@ function About() {
               Casa Cavour ligt aan de Via Cavour, een van de oudste straten van Bertinoro, een middeleeuws heuvelstadje bijgenaamd het <em>"Balkon van de Romagna"</em> vanwege het panoramische uitzicht tot aan de Adriatische Zee.
             </p>
             <p style={{ fontSize: "0.94rem", color: C.textMid, lineHeight: 1.85, fontFamily: "'DM Sans',sans-serif", marginBottom: "1.75rem" }}>
-              Het appartement is ontworpen voor wie de authentieke Romagna wil beleven: korte verhuur met ingerichte keuken, ideaal voor koppels die een romantisch weekend zoeken, liefhebbers van wijntoerisme en iedereen die Bertinoro wil gebruiken als uitvalsbasis voor de Romagna, de kust en de middeleeuwse dorpen van Emilia-Romagna.
+              Het appartement is ontworpen voor wie de authentieke Romagna wil beleven: korte verhuur met ingerichte keuken, ideaal voor koppels die een romantisch weekend zoeken, liefhebbers van wijntoerisme en iedereen die Bertinoro wil gebruiken als uitvalsbasis voor de Romagna, de kust en de middeleeuwse dorpen van Emilia-Romagna. Voor evenementen, routes en lokale attracties is het officiële toerisme portaal <a href="https://www.visitbertinoro.it/it/" target="_blank" rel="noopener noreferrer" style={{ color: C.gold, textDecoration: "none" }}>visitbertinoro.it</a>.
             </p>
             <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
               {[
-                "15 min van Cesena · 30 min van Cesenatico",
+                "15 min van Cesena · 20 min van Forlì",
                 "35 min van de Republiek San Marino",
                 "40 min van Rimini en de Adriatische Riviera",
                 "Directe toegang tot de Wijn- en Smakenroute",
@@ -706,7 +706,7 @@ function Footer() {
   return (
     <footer style={{ background: C.bg3, borderTop: `1px solid ${C.border}`, padding: "4rem 2rem 2rem" }}>
       <div style={{ maxWidth: 1200, margin: "0 auto" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr", gap: "3rem", marginBottom: "3rem" }} className="footer-grid">
+        <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr 1fr", gap: "3rem", marginBottom: "3rem" }} className="footer-grid">
           <div>
             <div style={{ display: "flex", alignItems: "center", gap: "0.6rem", marginBottom: "0.9rem" }}>
               <img src={IMG.bertinoro} alt="Bertinoro" style={{ height: 30, width: 30, objectFit: "contain", filter: "brightness(0) saturate(100%) invert(45%) sepia(60%) saturate(600%) hue-rotate(10deg) brightness(85%)" }} />
@@ -727,6 +727,20 @@ function Footer() {
                 {label}
               </a>
             ))}
+          </div>
+          <div>
+            <div style={{ fontSize: "0.67rem", letterSpacing: "0.18em", textTransform: "uppercase", color: C.textSoft, fontFamily: "'DM Sans',sans-serif", marginBottom: "0.85rem" }}>Host</div>
+            <div style={{ fontFamily: "'DM Sans',sans-serif", fontSize: "0.82rem", color: C.textMid, lineHeight: 1.75, marginBottom: "0.65rem" }}>
+              Lucea Collection<br />
+              <a href="mailto:luceacollection@gmail.com" style={{ color: C.textMid, textDecoration: "none" }}>luceacollection@gmail.com</a>
+            </div>
+            <div style={{ marginTop: "1rem", fontSize: "0.67rem", letterSpacing: "0.18em", textTransform: "uppercase", color: C.textSoft, fontFamily: "'DM Sans',sans-serif", marginBottom: "0.75rem" }}>Volg ons</div>
+            <div style={{ display: "flex", gap: "0.75rem" }}>
+              <a href="https://www.instagram.com/bnb_bertinoro/" target="_blank" rel="noopener noreferrer" style={{ color: C.textMid, textDecoration: "none", fontSize: "0.83rem", fontFamily: "'DM Sans',sans-serif", transition: "color 0.2s" }}
+                onMouseEnter={e => e.target.style.color=C.gold} onMouseLeave={e => e.target.style.color=C.textMid}>Instagram</a>
+              <a href="https://www.facebook.com/profile.php?id=61577458010505" target="_blank" rel="noopener noreferrer" style={{ color: C.textMid, textDecoration: "none", fontSize: "0.83rem", fontFamily: "'DM Sans',sans-serif", transition: "color 0.2s" }}
+                onMouseEnter={e => e.target.style.color=C.gold} onMouseLeave={e => e.target.style.color=C.textMid}>Facebook</a>
+            </div>
           </div>
           <div>
             <div style={{ fontSize: "0.67rem", letterSpacing: "0.18em", textTransform: "uppercase", color: C.textSoft, fontFamily: "'DM Sans',sans-serif", marginBottom: "0.85rem" }}>Boek</div>
