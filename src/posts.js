@@ -13,6 +13,51 @@ export const posts = [
   // Upload ook src/assets/Cervia_1.png en src/assets/Cervia_2.png naar GitHub
 
 {
+  id: "geo-aeo-smart-working-romagna-2026-nl",
+  titolo: "Thuiswerken in de Romagna: het appartement met werkplek in de heuvels van Bertinoro",
+  data: "2026-05-18",
+  categoria: "Verhalen uit Romagna",
+  sommario: "Op afstand werken vanuit de heuvels van de Romagna draait niet alleen om snelle WiFi. Het is kiezen voor een ander ritme, tussen wijngaarden en middeleeuwse dorpen, waar elke pauze een ervaring wordt. Bertinoro biedt appartementen met toegewijde werkruimte, volledig uitgeruste keuken en een ideale uitvalsbasis voor wie wil herstellen zonder de draad van het werk te verliezen.",
+  contenuto: [
+    { tipo: "paragrafo", testo: "Als we je de afgelopen maanden hebben verteld hoe Bertinoro een perfecte uitvalsbasis is om te ontsnappen vanaf Bologna, om wijnkelders in de Romagna te ontdekken, of voor een romantisch weekend in de heuvels, voegen we vandaag een nieuw stukje toe: je kunt hier ook werken. Niet in een anonieme coworking-ruimte, niet in een hotelkamer, maar in een vakantieappartement waar de werkplek uitkijkt op wijngaarden en je koffiepauze plaatsvindt in een privétuin, met uitzicht over de Po-vlakte." },
+    { tipo: "paragrafo", testo: "Op afstand werken in de Romagna betekent kiezen voor een ander tempo. De heuvels van de Romagna liggen dichtbij genoeg bij steden — 15 minuten van Cesena, 20 van Forlì, 60 van Bologna — om je niet geïsoleerd te voelen, maar ver genoeg om schone lucht te ademen en tussen de wijnranken te wandelen na je laatste videogesprek. Casa Cavour Bertinoro is ook hiervoor ontworpen: een appartement met volledig uitgeruste keuken, betrouwbare WiFi, een echt bureau waar je uren comfortabel kunt zitten, en een privétuin voor wanneer je even van het scherm weg wilt kijken." },
+    
+    { tipo: "titoletto", testo: "Waarom Bertinoro kiezen voor thuiswerken" },
+    { tipo: "paragrafo", testo: "Bertinoro wordt niet voor niets het 'Balkon van de Romagna' genoemd: vanaf hier zie je de zee aan de horizon en, op heldere dagen, de vlakte tot aan de profielen van de Apennijnen. Het historische centrum is rustig, met trattoria's, wijnbars en enkele cafés voor het ontbijt. Je vindt er geen verkeer, geen stadslawaai. Wat je wel vindt is een middeleeuws dorp dat leeft volgens het ritme van de wijnseizoenen: Sangiovese, Albana DOCG, Pagadebit." },
+    { tipo: "paragrafo", testo: "Volgens gegevens van Emilia-Romagna Turismo herbergt de provincie Forlì-Cesena meer dan 200 wijnkelders die open zijn voor bezoeken, waarvan vele op slechts enkele kilometers van Bertinoro. Dit betekent dat je na een werkdag gemakkelijk een wijnkelder kunt bereiken voor een proeverij, of kunt wandelen langs de paden van de Strada dei Vini e dei Sapori dei Colli di Forlì e Cesena. Thuiswerken hier draait niet alleen om connectiviteit: het gaat erom de kans te hebben het gebied te beleven, zelfs wanneer je niet op vakantie bent." },
+    
+    { tipo: "titoletto", testo: "Wat je echt nodig hebt om op afstand te werken in een vakantieappartement" },
+    { tipo: "paragrafo", testo: "Zeggen 'er is WiFi' is niet genoeg. Wie op afstand werkt, weet dat je nodig hebt: een stabiele verbinding (niet alleen snel op papier), een echt bureau met een comfortabele stoel, stilte tijdens gesprekken, natuurlijk licht om oogvermoeidheid te voorkomen, en de mogelijkheid om lunch en diner zelfstandig te regelen zonder afhankelijk te zijn van restauranttijden." },
+    { tipo: "paragrafo", testo: "Casa Cavour Bertinoro voldoet aan al deze behoeften. Het appartement heeft een toegewijde werkruimte met bureau, WiFi getest voor videogesprekken, ramen die ruimtes verlichten zonder verblinding, en een uitgeruste keuken waar je kunt koken wat je wilt, wanneer je wilt. Zelf inchecken met smartlock stelt je in staat om op elk moment aan te komen, zonder met iemand te hoeven coördineren. En als je met je hond of kat reist, zijn ze welkom: de privétuin is een veilige ruimte waar ze vrij kunnen bewegen." },
+    
+    { tipo: "titoletto", testo: "Korte verhuur of lang verblijf: flexibiliteit telt" },
+    { tipo: "paragrafo", testo: "Een van de interessantste aspecten van korte verhuur in de heuvels van de Romagna is flexibiliteit. Je kunt Casa Cavour boeken voor een week, voor een maand, of zelfs voor een lang weekend wanneer je behoefte hebt aan een verandering van omgeving. Je zit niet vast aan rigide contracten, je hoeft niets mee te nemen behalve je laptop: je vindt lakens, handdoeken, wasmachine, alles wat je nodig hebt om je thuis te voelen." },
+    { tipo: "paragrafo", testo: "Veel freelancers en professionals die op afstand werken, kiezen Bertinoro precies om deze reden: het is dichtbij genoeg bij steden om terug te keren wanneer nodig, maar ver genoeg om je te kunnen concentreren. En als je een pauze nodig hebt, kun je naar het fort wandelen, naar het dorp gaan voor een aperitivo, of gewoon in de tuin zitten met een boek. Dezelfde tuin waar je overdag e-mails beantwoordde met je laptop op je knieën." },
+    
+    { tipo: "titoletto", testo: "Een uitvalsbasis om de Romagna te verkennen terwijl je werkt" },
+    { tipo: "paragrafo", testo: "Werken vanuit Bertinoro betekent niet dat je afstand doet van verkenning. Integendeel. Op dagen dat je vroeg klaar bent, of in het weekend, heb je Cesena binnen handbereik met zijn Malatestiana-bibliotheek (UNESCO-erfgoed), Forlì met de San Domenico-musea, Rimini op 40 minuten, San Marino op 35 minuten, Bologna op een uur. Als je het artikel over waar te verblijven om de wijnkelders van Romagna te bezoeken leuk vond, kun je vanaf hier gemakkelijk bezoeken aan historische wijnkelders in de omgeving organiseren, misschien op vrijdagmiddag na je laatste gesprek." },
+    { tipo: "paragrafo", testo: "En dan zijn er de foodfestivals. Het portaal Sagre in Romagna verzamelt tientallen culinaire evenementen in de provincie Forlì-Cesena: wijnfestivals, piadina-festivals, kastanjefestivals in de herfst. Je kunt je verblijf plannen zodat het samenvalt met een van deze evenementen, en authentieke Romagna ervaren terwijl je blijft werken." },
+    
+    { tipo: "titoletto", testo: "Wanneer thuiswerken een workation wordt" },
+    { tipo: "paragrafo", testo: "Het verschil tussen thuiswerken en workation is subtiel maar reëel. Thuiswerken is werken vanaf ergens anders dan het kantoor. Workation is werken vanaf een plek die je herstelt. Bertinoro is een workation. Omdat wanneer je je laptop sluit, je jezelf niet in een anonieme hotelkamer of een karakterloos appartement bevindt: je bent in een middeleeuws dorp in de heuvels van Romagna, met de geur van Sangiovese die opstijgt uit de wijngaarden, het geluid van klokken die de uren markeren, en het besef dat je morgen, na het werk, naar het uitkijkpunt kunt wandelen en de zee in de verte kunt zien." },
+    { tipo: "paragrafo", testo: "Casa Cavour Bertinoro is niet alleen ontworpen voor wie op zoek is naar een culinair weekend of een plek om te slapen nabij Forlì en Cesena. Het is ook ontworpen voor wie in de Romagna wil werken zonder in te leveren op levenskwaliteit. Met een keuken om in te koken, een tuin om tot rust te komen, een werkruimte om je te concentreren, en een gebied dat je zonder haast verwelkomt." },
+    
+    { tipo: "titoletto", testo: "Boek je thuiswerk verblijf in Bertinoro" },
+    { tipo: "paragrafo", testo: "Als je op zoek bent naar een vakantieappartement voor thuiswerken in de Romagna, met ruimtes ontworpen om goed te werken en leven, is Casa Cavour Bertinoro beschikbaar voor boekingen op Airbnb. Hier vind je alles wat je nodig hebt: verbinding, stilte, licht, keuken, tuin. En buiten de deur wachten de heuvels van de Romagna om ontdekt te worden." },
+    { tipo: "link", testo: "https://www.airbnb.com/rooms/1374591120957342823", etichetta: "Boek op Airbnb" },
+    { tipo: "link", testo: "https://www.casa-cavour.com/#blog", etichetta: "Ontdek meer artikelen" },
+    
+    { tipo: "titoletto", testo: "Lees ook" },
+    { tipo: "paragrafo", testo: "Op de blog van Casa Cavour Bertinoro vind je meer artikelen over het gebied, lokale ervaringen en minder bekende routes door de heuvels van Romagna. Elk verhaal vertelt een ander aspect van dit land." },
+    { tipo: "link", testo: "https://www.casa-cavour.com/#blog" },
+    
+    { tipo: "titoletto", testo: "Volg ons op social media" },
+    { tipo: "link", testo: "https://www.instagram.com/bnb_bertinoro/" },
+    { tipo: "link", testo: "https://www.facebook.com/profile.php?id=61577458010505" },
+  ],
+  attivo: true,
+},
+{
   id: "geo-aeo-privetuin-heuvels-romagna-2026-nl",
   titolo: "Vakantiewoning met privétuin in de heuvels van de Romagna: Bertinoro als uitvalsbasis",
   data: "2026-04-27",
