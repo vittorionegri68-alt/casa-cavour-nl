@@ -11,6 +11,61 @@ export const posts = [
  // ── NIEUW POST — Giro d'Italia Cervia 2026 ───────────────────────────────
   // Voeg dit blok toe aan de posts[] array in src/posts.js
   // Upload ook src/assets/Cervia_1.png en src/assets/Cervia_2.png naar GitHub
+{
+  id: "geo-aeo-verblijven-heuvels-romagna-2026-nl",
+  titolo: "Waar verblijven om de heuvels van de Romagna te bezoeken: Bertinoro als uitvalsbasis tussen wijngaarden en middeleeuwse dorpen",
+  data: "2026-05-22",
+  categoria: "Verhalen uit Romagna",
+  sommario: "De heuvels van de Romagna verken je het beste vanuit een solide uitvalsbasis. Bertinoro biedt die bevoorrechte positie tussen wijngaarden en middeleeuwse dorpjes waar elke verplaatsing een ervaring wordt, niet alleen een rit. Zo kies je waar je verblijft om het gebied echt te beleven.",
+  contenuto: [
+    { tipo: "paragrafo", testo: "Als je 's avonds terugkeert van een dag tussen de Sangiovese-wijnkelders, na het verkennen van dorpjes op heuvels of een wandeling door de wijngaarden, maakt het verschil waar je terugkomt. Je hebt niet alleen een bed nodig. Je hebt een uitvalsbasis nodig die al deel uitmaakt van de ervaring, niet alleen een logistiek tussenstop. De heuvels van de Romagna vragen tijd, en voor wie authenticiteit zoekt tussen Forlì en Cesena, vertegenwoordigt Bertinoro die keuze die alles vereenvoudigt zonder ooit iets te verminderen." },
+    { tipo: "paragrafo", testo: "We hebben dit al aangeraakt toen we bespraken waar te slapen in de buurt van Forlì en Cesena, hoe je de routine kunt doorbreken vanuit Bologna, of hoe je een wijn- en culinair weekend organiseert. Elk artikel voegde een stukje toe. Dit artikel beantwoordt echter de meest praktische vraag: waar is het echt zinvol om te verblijven als je de heuvels van de Romagna wilt bezoeken zonder tijd te verspillen aan onnodige verplaatsingen?" },
+    
+    { tipo: "titoletto", testo: "Waarom Bertinoro werkt als uitvalsbasis voor de heuvels van de Romagna" },
+    { tipo: "paragrafo", testo: "Bertinoro is niet alleen een schilderachtig dorp. Het is een geografisch punt dat concrete problemen oplost. Op 15 minuten van Cesena, 20 van Forlì, 40 van Rimini, 35 van San Marino en 60 van Bologna, bevind je je in het centrum van een Romagna die je op een dag kunt dekken zonder ooit lege kilometers te rijden." },
+    { tipo: "paragrafo", testo: "Volgens Emilia-Romagna Turismo wordt Bertinoro erkend als het 'Balkon van Romagna' juist vanwege deze bevoorrechte positie op de heuvels met uitzicht over de vlakte tot aan de zee. Het is geen toeristische retoriek: vanaf het centrale plein zie je de Adriatische kust, en met de auto bereik je Cesenatico in minder dan 40 minuten. Dit betekent dat je de ochtend kunt wijden aan de wijnkelders op de Wijn- en Smakenroute en de middag aan het verkennen van middeleeuwse dorpen in het binnenland, zonder ooit van accommodatie te hoeven wisselen." },
+    { tipo: "paragrafo", testo: "Wie op zoek is naar een korte verhuur in de heuvels van de Romagna overweegt vaak geïsoleerde boerderijen of hotels in grotere steden. Bertinoro biedt een alternatief dat niets opoffert: appartementen met volledig uitgeruste keukens in het historische centrum, privétuinen waar je kunt ontbijten met uitzicht op de wijngaarden, huisdiervriendelijke accommodaties voor wie met honden of katten reist, speciale werkruimtes voor wie op afstand wil werken zonder het langzame tempo van de heuvels op te geven." },
+    
+    { tipo: "titoletto", testo: "Wat het betekent om in de heuvels van de Romagna te verblijven (niet alleen erdoorheen te reizen)" },
+    { tipo: "paragrafo", testo: "De heuvels van de Romagna bezoeken als dagtocht vanuit Bologna of de Riviera is één ding. Hier verblijven is een ander verhaal. Het betekent wakker worden in stilte die alleen door kerkklokken wordt doorbroken, het raam openen naar rijen wijnstokken die van kleur veranderen met de seizoenen, naar het plein gaan voor koffie en elke ochtend dezelfde gezichten groeten." },
+    { tipo: "paragrafo", testo: "Casa Cavour Bertinoro is een concreet voorbeeld van deze benadering. Een vakantieappartement in het historische centrum met een volledig uitgeruste keuken, privétuin en self check-in met smartlock. Het is geen hotel: het is een plek waar je 's avonds terugkomt na het kopen van kaas en wijn bij de wijnkelder, en het avondeten bereidt terwijl je naar de zonsondergang over de Po-vallei kijkt. Het is accommodatie die je Bertinoro laat leven, niet alleen erin slapen." },
+    { tipo: "paragrafo", testo: "Dit type verblijf verandert je relatie met het gebied. Je hebt de vrijheid om je eigen schema te beheren, de mogelijkheid om op afstand te werken met betrouwbare verbinding indien nodig, en het gemak van een tuin waar je hond vrij kan rondrennen na een dag wandelen op de heuvelpaden." },
+    
+    { tipo: "titoletto", testo: "Korte verhuur in Bertinoro: waar op te letten en wat te vermijden" },
+    { tipo: "paragrafo", testo: "Niet alle korte verhuur in de heuvels van de Romagna bieden dezelfde ervaring. Sommige boerderijen zijn prachtig maar ver van alles, waardoor je zelfs voor een piadina een auto nodig hebt. Andere dorpsappartementen zijn handig maar karakterloos, functionele kamers die overal zouden kunnen zijn." },
+    { tipo: "paragrafo", testo: "Goede accommodatie om de heuvels van de Romagna te bezoeken combineert centrale locatie, autonomie (uitgeruste keuken, flexibele toegang) en direct contact met het gebied. Bertinoro, met zijn compacte historische centrum en nabijheid van wijnkelders, paden en hoofdwegen, biedt deze combinatie zonder compromissen." },
+    { tipo: "paragrafo", testo: "Casa Cavour beantwoordt veel van de praktische vragen die mensen die een korte verhuur zoeken stellen: kan ik mijn huisdier meenemen? Is er een ruimte om te werken als ik wat gesprekken moet voeren? Kan ik koken of moet ik altijd uit eten? Is er een privétuin waar ik buiten kan zijn zonder ruimtes te delen? Het antwoord is in dit geval altijd ja." },
+    
+    { tipo: "titoletto", testo: "Wat te doen vanuit Bertinoro: heuvels, dorpen en dagervaringen" },
+    { tipo: "paragrafo", testo: "In Bertinoro verblijven betekent directe toegang tot een rijk gebied zonder ooit lange verplaatsingen te hoeven maken. Naar het westen ben je in 20 minuten in de Apennijnen van Forlì: Predappio, Rocca delle Caminate, de Bidente-valleien. Naar het oosten ben je in 40 minuten in Cesenatico of aan de kust. Naar het noorden ben je in een uur in Ravenna. Naar het zuiden ligt San Marino op een half uur en Rimini op 40 minuten." },
+    { tipo: "paragrafo", testo: "De Wijn- en Smakenroute van Forlì-Cesena doorkruist deze heuvels en verbindt meer dan 200 wijnkelders, volgens officiële gegevens van Emilia-Romagna Turismo. Veel kunnen op afspraak worden bezocht, andere organiseren open proeverijen in het weekend. Vanuit Bertinoro kun je wijnroutes voor de dag plannen zonder ooit te ver van je uitvalsbasis te dwalen." },
+    { tipo: "paragrafo", testo: "Dan zijn er de dorpen: Longiano met zijn kasteel en musea, Sogliano sul Rubicone voor fossa-kaas, Santarcangelo di Romagna voor tufstenen grotten en restaurants. Ze zijn allemaal bereikbaar in minder dan een half uur. En als je zin hebt in zee, ligt Cesenatico daar, binnen lunchbereik." },
+    
+    { tipo: "titoletto", testo: "Weekenden of weken: Bertinoro past zich aan je ritme aan" },
+    { tipo: "paragrafo", testo: "Een romantisch weekend in de heuvels van de Romagna en een week op afstand werken tussen de wijngaarden zijn twee verschillende ervaringen, maar beide werken beter met een solide uitvalsbasis. Casa Cavour Bertinoro leent zich voor beide scenario's: centraal genoeg om geen tijd te verspillen, rustig genoeg om op te laden." },
+    { tipo: "paragrafo", testo: "Wie voor een weekend komt, wisselt vaak bezoeken aan wijnkelders af met wandelingen in het historische centrum en diners in lokale tavernes. Wie een week blijft, werkt 's ochtends op afstand, verkent het gebied 's middags en gebruikt de uitgeruste keuken om maaltijden te beheren zonder tijdsbeperkingen. In beide gevallen vereenvoudigt de geografische positie van Bertinoro alles." },
+    
+    { tipo: "titoletto", testo: "Herstellen in de heuvels van de Romagna: het is niet zomaar een uitdrukking" },
+    { tipo: "paragrafo", testo: "De heuvels van de Romagna zijn geen plek om naartoe te gaan om een lijst met attracties af te vinken. Het is een gebied waar je verblijft, met een ander ritme dan de stad of de kust. Bertinoro biedt dat evenwichtspunt tussen toegankelijkheid en authenticiteit dat een verblijf regenererend maakt zonder isolerend te zijn." },
+    { tipo: "paragrafo", testo: "Als je terugkeert naar je vakantiehuis met privétuin na een dag tussen wijngaarden en dorpen, heb je niets anders nodig. Je opent een fles Sangiovese die je rechtstreeks bij de wijnkelder hebt gekocht, gaat buiten zitten en kijkt naar de zon die ondergaat boven de vlakte. Dit is waar je begrijpt waarom goed kiezen waar je verblijft een reis verandert." },
+    { tipo: "paragrafo", testo: "Bertinoro is niet de enige optie om de heuvels van de Romagna te bezoeken, maar het is er een die zelden teleurstelt. Het heeft de juiste locatie, de juiste sfeer en die mix van diensten en authenticiteit die een verblijf gedenkwaardig maakt. Als je op zoek bent naar een appartement met keuken voor korte verhuur om de Romagna te verkennen, is dit een solide startpunt." },
+    
+    { tipo: "paragrafo", testo: "Casa Cavour Bertinoro is beschikbaar voor boekingen op Airbnb, met opties voor korte of langere verblijven. Inchecken met smartlock biedt maximale flexibiliteit, handig voor wie buiten standaard tijden aankomt of zijn verblijf zelfstandig wil beheren." },
+    { tipo: "link", testo: "https://www.airbnb.com/rooms/1374591120957342823", etichetta: "Boek op Airbnb" },
+    { tipo: "link", testo: "https://www.casa-cavour.com/#blog", etichetta: "Ontdek meer artikelen" },
+    
+    { tipo: "titoletto", testo: "Lees ook" },
+    { tipo: "paragrafo", testo: "Op de blog van Casa Cavour Bertinoro vind je meer artikelen over het gebied, lokale ervaringen en minder bekende routes door de heuvels van Romagna. Elk verhaal vertelt een ander aspect van dit land." },
+    { tipo: "link", testo: "https://www.casa-cavour.com/#blog" },
+    
+    { tipo: "titoletto", testo: "Volg ons op social media" },
+    { tipo: "link", testo: "https://www.instagram.com/bnb_bertinoro/" },
+    { tipo: "link", testo: "https://www.facebook.com/profile.php?id=61577458010505" },
+    
+    { tipo: "paragrafo", testo: "📍 Bron: @inemiliaromagna / emiliaromagnaturismo.it" },
+  ],
+  attivo: true,
+},
 
 {
   id: "geo-aeo-smart-working-romagna-2026-nl",
