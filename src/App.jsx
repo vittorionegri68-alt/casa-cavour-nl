@@ -471,11 +471,11 @@ function About() {
               Casa Cavour ligt aan de Via Cavour, een van de oudste straten van Bertinoro, een middeleeuws heuvelstadje bijgenaamd het <em>"Balkon van de Romagna"</em> vanwege het panoramische uitzicht tot aan de Adriatische Zee.
             </p>
             <p style={{ fontSize: "0.94rem", color: C.textMid, lineHeight: 1.85, fontFamily: "'DM Sans',sans-serif", marginBottom: "1.75rem" }}>
-              Het appartement is ontworpen voor wie de authentieke Romagna wil beleven: korte verhuur met ingerichte keuken, ideaal voor koppels die een romantisch weekend zoeken, liefhebbers van wijntoerisme en iedereen die Bertinoro wil gebruiken als uitvalsbasis voor de Romagna, de kust en de middeleeuwse dorpen van Emilia-Romagna. Voor evenementen, routes en lokale attracties is het officiële toerisme portaal <a href="https://www.visitbertinoro.it/it/" target="_blank" rel="noopener noreferrer" style={{ color: C.gold, textDecoration: "none" }}>visitbertinoro.it</a>.
+              Het appartement is ontworpen voor wie de authentieke Romagna wil beleven: korte verhuur met ingerichte keuken, ideaal voor koppels die een romantisch weekend zoeken, liefhebbers van wijntoerisme en iedereen die Bertinoro wil gebruiken als uitvalsbasis voor de Romagna, de kust en de middeleeuwse dorpen van Emilia-Romagna.
             </p>
             <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
               {[
-                "15 min van Cesena · 20 min van Forlì",
+                "15 min van Cesena · 30 min van Cesenatico",
                 "35 min van de Republiek San Marino",
                 "40 min van Rimini en de Adriatische Riviera",
                 "Directe toegang tot de Wijn- en Smakenroute",
@@ -596,6 +596,14 @@ function Blog() {
                     Controleer beschikbaarheid op Airbnb ↗
                   </a>
                 </div>
+                <div style={{ marginTop: "2.5rem", paddingTop: "2rem", borderTop: `1px solid ${C.border}`, display: "flex", justifyContent: "center" }}>
+                  <button onClick={handleChiudi}
+                    style={{ background: "transparent", border: `1px solid ${C.gold}`, color: C.gold, fontFamily: "'DM Sans',sans-serif", fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", cursor: "pointer", padding: "0.65rem 2rem", transition: "all 0.2s" }}
+                    onMouseEnter={e => { e.currentTarget.style.background = C.gold; e.currentTarget.style.color = "#fff"; }}
+                    onMouseLeave={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = C.gold; }}>
+                    ← Alle artikelen
+                  </button>
+                </div>
               </div>
             </Reveal>
           );
@@ -706,7 +714,7 @@ function Footer() {
   return (
     <footer style={{ background: C.bg3, borderTop: `1px solid ${C.border}`, padding: "4rem 2rem 2rem" }}>
       <div style={{ maxWidth: 1200, margin: "0 auto" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr 1fr", gap: "3rem", marginBottom: "3rem" }} className="footer-grid">
+        <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr", gap: "3rem", marginBottom: "3rem" }} className="footer-grid">
           <div>
             <div style={{ display: "flex", alignItems: "center", gap: "0.6rem", marginBottom: "0.9rem" }}>
               <img src={IMG.bertinoro} alt="Bertinoro" style={{ height: 30, width: 30, objectFit: "contain", filter: "brightness(0) saturate(100%) invert(45%) sepia(60%) saturate(600%) hue-rotate(10deg) brightness(85%)" }} />
@@ -727,20 +735,6 @@ function Footer() {
                 {label}
               </a>
             ))}
-          </div>
-          <div>
-            <div style={{ fontSize: "0.67rem", letterSpacing: "0.18em", textTransform: "uppercase", color: C.textSoft, fontFamily: "'DM Sans',sans-serif", marginBottom: "0.85rem" }}>Host</div>
-            <div style={{ fontFamily: "'DM Sans',sans-serif", fontSize: "0.82rem", color: C.textMid, lineHeight: 1.75, marginBottom: "0.65rem" }}>
-              Lucea Collection<br />
-              <a href="mailto:luceacollection@gmail.com" style={{ color: C.textMid, textDecoration: "none" }}>luceacollection@gmail.com</a>
-            </div>
-            <div style={{ marginTop: "1rem", fontSize: "0.67rem", letterSpacing: "0.18em", textTransform: "uppercase", color: C.textSoft, fontFamily: "'DM Sans',sans-serif", marginBottom: "0.75rem" }}>Volg ons</div>
-            <div style={{ display: "flex", gap: "0.75rem" }}>
-              <a href="https://www.instagram.com/bnb_bertinoro/" target="_blank" rel="noopener noreferrer" style={{ color: C.textMid, textDecoration: "none", fontSize: "0.83rem", fontFamily: "'DM Sans',sans-serif", transition: "color 0.2s" }}
-                onMouseEnter={e => e.target.style.color=C.gold} onMouseLeave={e => e.target.style.color=C.textMid}>Instagram</a>
-              <a href="https://www.facebook.com/profile.php?id=61577458010505" target="_blank" rel="noopener noreferrer" style={{ color: C.textMid, textDecoration: "none", fontSize: "0.83rem", fontFamily: "'DM Sans',sans-serif", transition: "color 0.2s" }}
-                onMouseEnter={e => e.target.style.color=C.gold} onMouseLeave={e => e.target.style.color=C.textMid}>Facebook</a>
-            </div>
           </div>
           <div>
             <div style={{ fontSize: "0.67rem", letterSpacing: "0.18em", textTransform: "uppercase", color: C.textSoft, fontFamily: "'DM Sans',sans-serif", marginBottom: "0.85rem" }}>Boek</div>
