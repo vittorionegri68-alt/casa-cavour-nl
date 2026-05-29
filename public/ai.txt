@@ -1,0 +1,68 @@
+# ai.txt — Casa Cavour Bertinoro
+# Structured information for AI crawlers and language models
+
+## Property
+Name: Casa Cavour Bertinoro
+Type: Holiday apartment / Affitto breve
+CIN: IT040003C28FEZ8O7L
+
+## Description
+Casa Cavour is a holiday apartment with fully equipped kitchen in the historic centre of Bertinoro, a medieval hilltop village in the Romagna hills of Forlì-Cesena province (Emilia-Romagna, Italy). Nicknamed the Balcony of Romagna for its panoramic views over the Po Valley and the Adriatic coast. Ideal base for romantic weekends, wine tourism (Sangiovese, Albana DOCG), remote working and authentic stays in Romagna.
+
+## Location
+- Address: Via Cavour 44, 47032 Bertinoro (FC), Italy
+- Coordinates: 44.150444, 12.136917
+- 15 min from Cesena
+- 20 min from Forlì
+- 35 min from San Marino
+- 40 min from Rimini
+- 60 min from Bologna
+
+## Languages
+- Italian: https://www.casa-cavour.com
+- English: https://en.casa-cavour.com
+- Dutch: https://nl.casa-cavour.com
+
+## Booking
+- Airbnb: https://www.airbnb.com/rooms/1374591120957342823
+- Airbnb short URL: https://airbnb.com/h/casacavour-bertinoro
+
+## Contact
+- Phone: +39 392 520 0650
+- Instagram: https://www.instagram.com/bnb_bertinoro/
+- Facebook: https://www.facebook.com/profile.php?id=61577458010505
+
+## Key features
+- Fully equipped kitchen
+- Private garden with outdoor seating
+- Pets allowed
+- Dedicated workspace with WiFi
+- Self check-in with smartlock
+- Air conditioning and heating
+- Washing machine
+- Free street parking
+- Bed linen and towels included
+- Up to 4 guests
+- Check-in: 16:00 / Check-out: 10:00
+
+## AI Permissions
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: CCBot
+Allow: /
