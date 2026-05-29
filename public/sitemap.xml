@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Italian version (primary) -->
+  <url>
+    <loc>https://www.casa-cavour.com/</loc>
+    <lastmod>2026-04-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="it"        href="https://www.casa-cavour.com/" />
+    <xhtml:link rel="alternate" hreflang="en"        href="https://en.casa-cavour.com/" />
+    <xhtml:link rel="alternate" hreflang="nl"        href="https://nl.casa-cavour.com/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.casa-cavour.com/" />
+  </url>
+
+  <!-- English version -->
+  <url>
+    <loc>https://en.casa-cavour.com/</loc>
+    <lastmod>2026-04-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="it"        href="https://www.casa-cavour.com/" />
+    <xhtml:link rel="alternate" hreflang="en"        href="https://en.casa-cavour.com/" />
+    <xhtml:link rel="alternate" hreflang="nl"        href="https://nl.casa-cavour.com/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.casa-cavour.com/" />
+  </url>
+
+  <!-- Dutch version -->
+  <url>
+    <loc>https://nl.casa-cavour.com/</loc>
+    <lastmod>2026-04-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="it"        href="https://www.casa-cavour.com/" />
+    <xhtml:link rel="alternate" hreflang="en"        href="https://en.casa-cavour.com/" />
+    <xhtml:link rel="alternate" hreflang="nl"        href="https://nl.casa-cavour.com/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.casa-cavour.com/" />
+  </url>
+
+</urlset>
