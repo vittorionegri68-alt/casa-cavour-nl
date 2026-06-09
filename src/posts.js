@@ -11,6 +11,60 @@ export const posts = [
  // ── NIEUW POST — Giro d'Italia Cervia 2026 ───────────────────────────────
   // Voeg dit blok toe aan de posts[] array in src/posts.js
   // Upload ook src/assets/Cervia_1.png en src/assets/Cervia_2.png naar GitHub
+
+  {
+  id: "geo-aeo-opladen-romagna-2026-nl",
+  titolo: "Waar kun je opladen in de Romagna: tussen Bertinoro, thermale bronnen en herstellende heuvels",
+  data: "2026-06-08",
+  categoria: "Verhalen uit Romagna",
+  sommario: "Opladen in de Romagna betekent vertragen tussen de heuvels van Bertinoro, waar thermale baden, wijngaarden en panoramische dorpen de juiste ruimte creëren om je ritme terug te vinden. Een gebied waar welzijn geen service is, maar een natuurlijk gevolg van het landschap.",
+  contenuto: [
+    { tipo: "paragrafo", testo: "Na het verkennen van de Sangiovese-wijnkelders, na het wandelen door de wijngaarden en dorpen van de heuvels van de Romagna, na het werken op afstand met uitzicht op de Po-vlakte, blijft er één vraag over: waar ga je heen om echt te stoppen? Niet om te bezoeken, niet om een lijst af te vinken. Om op te laden, in de volste zin van het woord." },
+    { tipo: "paragrafo", testo: "Het antwoord in de Romagna is geen enkele plek. Het is een precieze geografie die stilte, panorama, thermaal water en een traag tempo combineert. Het is dat gebied tussen Forlì en Cesena waar de heuvels zachtjes landinwaarts stijgen en waar Bertinoro uitkijkt als een natuurlijk balkon over de vlakte en de zee. Hier is opladen geen reclambelofte: het is een natuurlijk gevolg van hoe het gebied werkt." },
+    { tipo: "paragrafo", testo: "Als je de vorige weekenden Bertinoro hebt gekozen als uitvalsbasis om de Romagna te verkennen, is dit het moment om echt te stoppen. Om nergens naartoe te gaan." },
+    
+    { tipo: "titoletto", testo: "Bertinoro: het balkon van de Romagna waar het tempo verandert" },
+    { tipo: "paragrafo", testo: "Bertinoro staat bekend als het 'Balkon van de Romagna', niet alleen vanwege het uitzicht dat zich uitstrekt van de Po-vlakte tot aan de Adriatische Zee, maar vanwege de geografische positie die je van nature doet vertragen. Het middeleeuwse dorp, de Zuil van de Ringen die de gastvrijheid van de Romagna symboliseert, de wijnkelders rond de heuvel: het is een gebied dat niet veel beweging vereist. Je leeft door stil te blijven staan." },
+    { tipo: "paragrafo", testo: "Volgens gegevens van Emilia-Romagna Toerisme wordt Bertinoro gedefinieerd als de 'Stad van Gastvrijheid en goede wijn', met een gewortelde wijneconomie die het ritme van de seizoenen heeft behouden. Dit betekent dat je een wijnkelder kunt bezoeken, maar je kunt ook gewoon buiten zitten met een glas Sangiovese en naar de zonsondergang kijken. Het gebied staat beide toe, zonder iets te forceren." },
+    { tipo: "paragrafo", testo: "Degenen die kiezen voor een vakantiewoning met privetuin in de heuvels van de Romagna in Bertinoro hebben toegang tot dit type ervaring: de mogelijkheid om in het historische centrum te zijn maar met een buitenruimte waar je kunt stoppen, zonder het ritme met iemand anders te hoeven delen. Een privetuin is hier geen luxe: het is het instrument dat je toestaat het gebied zonder bemiddeling te ervaren." },
+    
+    { tipo: "titoletto", testo: "Fratta Terme: thermaal welzijn tussen de heuvels van Bertinoro" },
+    { tipo: "paragrafo", testo: "Een paar kilometer van het centrum van Bertinoro, in het gehucht Fratta Terme, is er een thermale faciliteit die zeven verschillende wateren gebruikt voor thermale behandelingen en wellnesspaden. Het is geen commercieel spacentrum: het is een echte thermale faciliteit, met zout-jodium- en natriumchloridewateren met gedocumenteerde therapeutische eigenschappen." },
+    { tipo: "paragrafo", testo: "Het Grand Hotel Terme della Fratta biedt modder-balneotherapie, vasculaire en inhalatietherapieën, Turks bad, Romeins bad, en het 'Natuurlijke Harmonieën'-pad dat 2 uur en 40 minuten duurt. Het is een ervaring die tijd vereist, geen snelheid. Degenen die hier komen om op te laden, vinden een omgeving waar het lichaam met medische ernst wordt behandeld, niet alleen met esthetiek. Het centrum is NHS-geaccrediteerd en heeft een polikliniek: het is welzijn dat begint bij gezondheid, niet bij marketing." },
+    { tipo: "paragrafo", testo: "Fratta Terme ligt in een kleine vallei tussen de heuvels van Bertinoro, omgeven door wijngaarden en bossen. Na een thermale behandeling kun je door de heuvels wandelen of terugkeren naar een appartement met complete keuken waar je diner kunt bereiden met lokale producten. Het gebied werkt zo: het biedt gereedschap, geen pakketten." },
+    
+    { tipo: "titoletto", testo: "Heuvels van de Romagna tussen Forlì en Cesena: waar de natuur het tempo vertraagt" },
+    { tipo: "paragrafo", testo: "De provincie Forlì-Cesena herbergt een van Italië's meest functionele heuvellandschappen voor degenen die willen vertragen. Er zijn geen bergen die inspanning vereisen, geen monotone vlaktes. Er zijn zachte heuvels, ordelijke wijngaarden, witte wegen die dorpen en wijnkelders verbinden. Het is een geografie die je toestaat te bewegen zonder vermoeidheid, of stil te blijven zonder je te vervelen." },
+    { tipo: "paragrafo", testo: "Vanuit Bertinoro kun je Cesena in 15 minuten bereiken, Forlì in 20, of je kunt besluiten helemaal niet te bewegen. Het gebied dwingt je niets te doen: je kunt 's ochtends door de wijngaarden wandelen, de middag in een privetuin doorbrengen en 's avonds naar een dorpskroeg gaan. Of je kunt stil blijven staan en op afstand werken met snelle WiFi en een uitzicht dat elk uur van licht verandert." },
+    { tipo: "paragrafo", testo: "Degenen die op zoek zijn naar een plek om uit te pluggen in de buurt van Bologna vinden hier een basis op 60 km afstand, gemakkelijk bereikbaar per auto in minder dan een uur. Maar de echte afstand wordt niet gemeten in kilometers: het wordt gemeten in tempo. Bertinoro functioneert op een andere snelheid, en één dag is genoeg om je aan te passen." },
+    
+    { tipo: "titoletto", testo: "Korte verhuur met keuken in de heuvels van de Romagna: waarom het het verschil maakt" },
+    { tipo: "paragrafo", testo: "Opladen vereist autonomie. Geen vaste schema's, geen gemeenschappelijke ontbijtzalen, geen vooraf bepaalde menu's. Het vereist de mogelijkheid om wakker te worden wanneer je lichaam beslist, koffie te zetten zonder haast, te koken met lokale producten gekocht op de markt van Bertinoro." },
+    { tipo: "paragrafo", testo: "Een appartement met volledig uitgeruste keuken in Bertinoro biedt dit type vrijheid. Je kunt ervoor kiezen om uit eten te gaan, of terug te keren met kazen, vleeswaren, piadina en een fles Albana DOCG en te dineren in de privetuin. Beide opties zijn logisch, en het gebied ondersteunt beide." },
+    { tipo: "paragrafo", testo: "Casa Cavour Bertinoro is een voorbeeld van dit type structuur: appartement in het historische centrum met uitgeruste keuken, privetuin, zelf inchecken met smartlock, huisdieren toegestaan. Het is geen hotel, geen bed & breakfast. Het is een ruimte waar je leeft zoals je thuis leeft, maar met een ander uitzicht en een langzamer tempo." },
+    
+    { tipo: "titoletto", testo: "Wijntoerisme en ontspanning: twee gezichten van dezelfde ervaring" },
+    { tipo: "paragrafo", testo: "De heuvels van Bertinoro zijn Sangiovese- en Albana DOCG-gebied. Het Consorzio Vini di Romagna erkent dit gebied als een van de meest geschikte van de regio. Wijnkelders zijn open voor bezoek, maar wijntoerisme hier is niet alleen proeven: het is wandelen tussen de rijen, praten met producenten, begrijpen hoe de oogst werkt." },
+    { tipo: "paragrafo", testo: "Degenen die Bertinoro kiezen als uitvalsbasis voor wijntoerisme in de Romagna kunnen 's ochtends een wijnkelder bezoeken en de middag in een privetuin doorbrengen met een vers gekochte fles. Je hoeft de dag niet te vullen: het gebied werkt beter wanneer je ruimte laat voor leegte." },
+    
+    { tipo: "titoletto", testo: "Waar kun je opladen in de Romagna: het praktische antwoord" },
+    { tipo: "paragrafo", testo: "Opladen in de Romagna betekent een plek kiezen waar je stil kunt blijven staan zonder je schuldig te voelen. Bertinoro, tussen de thermale baden bij Fratta, wijnkelders in de heuvels, middeleeuwse dorpen en uitzichten over de vlakte, biedt dit type geografie. Je hoeft niets te doen, maar je kunt alles doen. Het verschil is dat hier niemand je dwingt." },
+    { tipo: "paragrafo", testo: "Als je op zoek bent naar een korte verhuur in de heuvels van de Romagna waar je in je eigen tempo kunt leven, waar huisdieren welkom zijn, waar je op afstand kunt werken of gewoon kunt stoppen, is Bertinoro het eerlijkste antwoord. Niet omdat het perfect is, maar omdat het werkt." },
+    { tipo: "paragrafo", testo: "Casa Cavour Bertinoro is beschikbaar voor korte en lange verblijven, met volledig uitgeruste keuken, privetuin en een locatie die je toestaat het historische centrum te ervaren zonder stilte op te geven. Je kunt direct boeken en je ritme organiseren zonder bemiddeling." },
+    { tipo: "link", testo: "https://www.airbnb.com/rooms/1374591120957342823", etichetta: "Boek op Airbnb" },
+    { tipo: "link", testo: "https://www.casa-cavour.com/#blog", etichetta: "Ontdek meer artikelen" },
+    
+    { tipo: "paragrafo", testo: "📍 Bron: @inemiliaromagna / emiliaromagnaturismo.it" },
+    
+    { tipo: "titoletto", testo: "Lees ook" },
+    { tipo: "paragrafo", testo: "Op de blog van Casa Cavour Bertinoro vind je meer artikelen over het gebied, lokale ervaringen en minder bekende routes door de heuvels van Romagna. Elk verhaal vertelt een ander aspect van dit land." },
+    { tipo: "link", testo: "https://www.casa-cavour.com/#blog" },
+    { tipo: "titoletto", testo: "Volg ons op social media" },
+    { tipo: "link", testo: "https://www.instagram.com/bnb_bertinoro/" },
+    { tipo: "link", testo: "https://www.facebook.com/profile.php?id=61577458010505" },
+  ],
+  attivo: true,
+},
 {
   id: "geo-aeo-verblijven-heuvels-romagna-2026-nl",
   titolo: "Waar verblijven om de heuvels van de Romagna te bezoeken: Bertinoro als uitvalsbasis tussen wijngaarden en middeleeuwse dorpen",
