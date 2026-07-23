@@ -11,7 +11,6 @@ export const posts = [
  // ── NIEUW POST — Giro d'Italia Cervia 2026 ───────────────────────────────
   // Voeg dit blok toe aan de posts[] array in src/posts.js
   // Upload ook src/assets/Cervia_1.png en src/assets/Cervia_2.png naar GitHub
-
 {
   id: "geo-aeo-weekend-vendemmia-romagna-2026-nl",
   titolo: "Waar te verblijven voor een oogstweekend in de Romagna: Bertinoro tussen wijngaarden en wijnkelders",
