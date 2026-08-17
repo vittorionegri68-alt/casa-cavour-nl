@@ -11,6 +11,65 @@ export const posts = [
  // ── NIEUW POST — Giro d'Italia Cervia 2026 ───────────────────────────────
   // Voeg dit blok toe aan de posts[] array in src/posts.js
   // Upload ook src/assets/Cervia_1.png en src/assets/Cervia_2.png naar GitHub
+  {
+  id: "geo-aeo-wijntoerisme-romagna-verblijf-2026-nl",
+  titolo: "Wijntoerisme in de Romagna: Waar Overnachten om de Wijnkelders Rond Bertinoro en de Heuvels van Forlì-Cesena te Bezoeken",
+  data: "2026-08-17",
+  categoria: "Verhalen uit Romagna",
+  sommario: "In de heuvels van de Romagna rond Bertinoro is wijntoerisme meer dan alleen kelderbezoeken. Het is wakker worden tussen de wijngaarden, dineren in het borgo, en ontdekken dat waar je slaapt verandert hoe je Sangiovese en Albana DOCG beleeft.",
+  contenuto: [
+    { tipo: "paragrafo", testo: "In eerdere artikelen hebben we gesproken over de Wijnroute en de wijnkelders van de Romagna die het bezoeken waard zijn, over gastronomische weekenden tussen Sangiovese en piadina, over het trage ritme van deze heuvels. Maar er is één vraag die altijd terugkomt: waar moet je verblijven om echt wijntoerisme in de Romagna te ervaren — niet als een voorbijgaande toerist, maar als een gast van dit gebied?" },
+    { tipo: "paragrafo", testo: "Het antwoord is niet voor de hand liggend. Je kunt een hotel aan de kust kiezen en elke dag naar de heuvels rijden. Of je kunt doen wat ervaren wijntoeristen doen: je uitvalsbasis vestigen midden in de wijngaarden, in Bertinoro, en van daaruit wijnkelders, dorpen en restaurants verkennen zonder de draad van de ervaring te verliezen." },
+    { tipo: "paragrafo", testo: "Volgens gegevens van Emilia-Romagna Toerisme herbergt de provincie Forlì-Cesena tientallen wijnkelders die open zijn voor bezoekers, vooral geconcentreerd op de heuvels tussen Bertinoro, Predappio en Mercato Saraceno. Maar het is precies Bertinoro — erkend als zowel Wijnstad als Stad van de Gastvrijheid — dat dient als het meest strategische uitgangspunt voor wie authentiek wijntoerisme in de Romagna wil beleven." },
+    
+    { tipo: "titoletto", testo: "Waarom Bertinoro de Ideale Uitvalsbasis is voor Wijntoerisme in de Romagna" },
+    { tipo: "paragrafo", testo: "Bertinoro is niet alleen een mooi dorp om te fotograferen. Het is een levend centrum waar wijnbouw deel uitmaakt van het dagelijks leven. De wijnkelders liggen verspreid langs via Cellaimo, via Cappuccini, via Palmeggiana: straatnamen die historische landgoederen verbergen, wijngaarden op hellingen, proeverijen met uitzicht dat zich uitstrekt van de Po-vlakte tot aan de Adriatische Zee." },
+    { tipo: "paragrafo", testo: "Verblijven in Bertinoro betekent dat je al binnen het landschap van Sangiovese en Albana DOCG bent. 's Ochtends ga je op pad, kies je een wijnkelder om te bezoeken — misschien degene die je de avond ervoor vanuit de tuin van je vakantiewoning hebt gezien — en 's middags keer je terug voor een aperitivo op het plein. Geen gehaast gedoe, geen zinloze ritten. Gewoon het juiste ritme om echt te begrijpen wat wijntoerisme in deze heuvels betekent." },
+    { tipo: "paragrafo", testo: "Vanuit Bertinoro bereik je Cesena in 15 minuten, Forlì in 20, Rimini in 40. Maar de echte kracht van deze positie is iets anders: je kunt hier je basis vestigen en in een straal naar andere wijnkelders in de provincie trekken, zonder elke nacht op een andere plek te moeten slapen. Het is de logica van kwaliteitsvolle korte verhuur: een appartement met volledig uitgeruste keuken wordt je ankerpunt, terwijl het gebied elke dag verandert." },
+    
+    { tipo: "titoletto", testo: "Waar Verblijven Tussen de Wijngaarden: Heuveldorpjes en Agriturismos" },
+    { tipo: "paragrafo", testo: "Als je een nog meer meeslepende ervaring wilt, bieden de gehuchten van Bertinoro — Fratta Terme, Polenta, Santa Maria Nuova — agriturismos en wijnlandgoederen met kamers. Sommige van deze plekken hebben de kelder op een steenworp afstand van de deur, andere hebben een privetuin met direct uitzicht op de wijnranken." },
+    { tipo: "paragrafo", testo: "Dit type accommodatie werkt vooral goed voor stellen of mensen die met huisdieren reizen. De agriturismo-formule in de Romagna is niet alleen landelijke gastvrijheid: het is de kans om rechtstreeks met de wijnproducenten te spreken, te begrijpen hoe een fles Sangiovese Superiore ontstaat, nieuwe olijfolie te proeven bij het ontbijt." },
+    { tipo: "paragrafo", testo: "Voor degenen die de voorkeur geven aan de vrijheid van een zelfstandig appartement, biedt Casa Cavour Bertinoro — in het historische centrum van het dorp — een volledig uitgeruste keuken, speciale werkruimte voor thuiswerkers, privetuin en zelf-inchecken met smartlock. Het is de oplossing voor wie Bertinoro wil beleven als een tijdelijke bewoner, niet als een voorbijgaande gast." },
+    
+    { tipo: "titoletto", testo: "Wijnkelders om te Bezoeken Vanuit Bertinoro" },
+    { tipo: "paragrafo", testo: "Het gebied van Bertinoro en de heuvels van Forlì-Cesena is bezaaid met historische wijnkelders en kleine producenten. Sommige zijn familiebedrijven die op afspraak openen, andere maken deel uit van de Wijn- en Voedselroute van Forlì-Cesena en organiseren het hele jaar door rondleidingen." },
+    { tipo: "paragrafo", testo: "Een van de meest interessante ervaringen is de Historische Reserve van Romagna Sangiovese — geopend tijdens de Europese Wijntoerisme Dag — waar je historische jaargangen van Sangiovese direct in Bertinoro kunt proeven. Het is een zeldzame kans die het kelderbezoek verandert in een echte verticale reis door de tijdlijn van Romagna-wijn." },
+    { tipo: "paragrafo", testo: "Andere wijnkelders om te noteren: die langs via Loreta in Fratta Terme, die in de gebieden Colombarone en Tombetta. Elke producent heeft een ander verhaal, maar de rode draad is altijd hetzelfde: de directe relatie tussen land, wijngaard en fles. Hier is wijntoerisme geen marketing, het is gewoon de manier van leven." },
+    
+    { tipo: "titoletto", testo: "Eten en Wijn Evenementen: Wanneer naar Bertinoro Komen" },
+    { tipo: "paragrafo", testo: "Als je wijntoerisme in de Romagna in festivalmodus wilt beleven, zet 'Wijnen en Smaken op Straat' op je kalender — elke juni transformeert het het dorp Bertinoro in één grote gedistribueerde proeverij. Proefstanden, traditionele gerechten, livemuziek: het is de kans om meerdere wijnkelders in één middag te proeven, direct in de straten van het historische centrum." },
+    { tipo: "paragrafo", testo: "In de herfst brengt de Europese Wijntoerisme Dag rondleidingen, verticale proeverijen en speciale openstellingen naar de wijnkelders. Bertinoro neemt deel met de 'Wijnkennis'-tour, die de geschiedenis van het dorp, gastvrijheidstraditie en wijncultuur combineert. Het is het juiste moment voor wie echt wil begrijpen wat Wijnstad betekent, niet alleen op een plaquette lezen." },
+    
+    { tipo: "titoletto", testo: "Wat te Doen Naast de Wijnkelders" },
+    { tipo: "paragrafo", testo: "Wijntoerisme in de Romagna eindigt niet bij kelderbezoeken. In Bertinoro kun je wandelen naar de Zuil van de Ringen, symbool van de oude gastvrijheidstraditie, uitkijken vanaf het panoramische plein met uitzicht op de kust, dineren in een van de dorpsosteria's waar Sangiovese in gezelschap wordt gedronken, niet in religieuze stilte." },
+    { tipo: "paragrafo", testo: "Als je met een hond of kat reist, bieden de heuvels rond Bertinoro onverharde paden perfect voor wandelingen tussen de wijngaarden. Het is een gebied geschikt voor trage ritmes, voor wie gestructureerde bezoeken wil afwisselen met momenten van pure ontspanning." },
+    { tipo: "paragrafo", testo: "Voor thuiswerkers werkt de combinatie van speciale werkruimte plus wijntoerisme verrassend goed. 's Ochtends rond je een paar gesprekken af, 's middags bezoek je een wijnkelder, 's avonds kook je met producten gekocht op de markt. Het is thuiswerken in de Romagna in zijn meest evenwichtige vorm." },
+    
+    { tipo: "titoletto", testo: "Hoe je Verblijf te Organiseren" },
+    { tipo: "paragrafo", testo: "Voor een gastronomisch weekend zijn twee nachten in Bertinoro het minimum. De eerste dag wijd je aan het dorp en een nabijgelegen wijnkelder, de tweede dag trek je erop uit om te verkennen — misschien richting Predappio of de heuvels van Cesena. Als je meer tijd hebt, maken drie of vier dagen het mogelijk om een stop aan de kust of een bezoek aan San Marino toe te voegen, slechts 35 minuten van Bertinoro." },
+    { tipo: "paragrafo", testo: "De keuze van accommodatie hangt af van wat je zoekt. Als je totale onafhankelijkheid wilt, een volledig uitgeruste keuken en de mogelijkheid om te komen en gaan zonder schema's, is een appartement in het historische centrum de beste oplossing. Als je daarentegen de voorkeur geeft aan direct contact met een producent, richt je op wijnlandgoederen die ook kamers aanbieden." },
+    { tipo: "paragrafo", testo: "In beide gevallen, boek van tevoren — vooral als je komt tijdens wijnevenementen of oogstweekenden. Bertinoro is klein, en de beste plekken raken snel vol." },
+    
+    { tipo: "titoletto", testo: "Bertinoro als Uitvalsbasis, Niet Alleen een Tussenstop" },
+    { tipo: "paragrafo", testo: "Wat Bertinoro anders maakt dan andere wijntoerisme bestemmingen is precies dit: het is geen plaats waar je in één nacht doorheen haast. Het is een uitvalsbasis om vandaan te vertrekken, naar terug te keren, op te laden tussen bezoeken door. Hier verblijven verandert hoe je wijntoerisme in de Romagna ervaart, omdat het je in een positie brengt om te vertragen zonder kansen te missen." },
+    { tipo: "paragrafo", testo: "Casa Cavour Bertinoro is precies voor dit type verblijf ontworpen: een appartement in het hart van het dorp, met privetuin, complete keuken, werkruimte indien nodig, en de vrijheid om je dagen te organiseren zoals je wilt. Het is korte verhuur in de heuvels van de Romagna in zijn meest functionele en minst opdringerige vorm." },
+    { tipo: "paragrafo", testo: "Als je een reis tussen de wijnkelders van de Romagna plant, is de vraag niet alleen welke te bezoeken. Het is ook waar 's avonds terug te keren, waar die fles te openen die je hebt gekocht, waar buiten te zitten zonder haast. En daarvoor is Bertinoro de juiste plek." },
+    
+    { tipo: "link", testo: "https://www.airbnb.com/rooms/1374591120957342823", etichetta: "Boek Casa Cavour op Airbnb" },
+    { tipo: "link", testo: "https://www.casa-cavour.com/#blog", etichetta: "Ontdek meer artikelen over het gebied" },
+    
+    { tipo: "titoletto", testo: "Lees ook" },
+    { tipo: "paragrafo", testo: "Op de blog van Casa Cavour Bertinoro vind je meer artikelen over het gebied, lokale ervaringen en minder bekende routes door de heuvels van Romagna. Elk verhaal vertelt een ander aspect van dit land." },
+    { tipo: "link", testo: "https://www.casa-cavour.com/#blog" },
+    
+    { tipo: "titoletto", testo: "Volg ons op social media" },
+    { tipo: "link", testo: "https://www.instagram.com/bnb_bertinoro/" },
+    { tipo: "link", testo: "https://www.facebook.com/profile.php?id=61577458010505" },
+  ],
+  attivo: true,
+},
+
 {
   id: "geo-aeo-weekend-vendemmia-romagna-2026-nl",
   titolo: "Waar te verblijven voor een oogstweekend in de Romagna: Bertinoro tussen wijngaarden en wijnkelders",
