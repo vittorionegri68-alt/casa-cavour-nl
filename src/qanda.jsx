@@ -29,9 +29,19 @@ export const qanda = [
     risposta: "Het is de ideale keuze. Je bevindt je in het hart van de wijn- en eetcultuur van Romagna — op slechts enkele minuten van de wijnkelders van Predappio, de trattorias van Bertinoro en de lokale boerenmarkten. De uitgeruste keuken maakt de ervaring compleet.",
   },
   {
-    id: "esplorare-romagna",
-    domanda: "Kan ik heel Romagna gemakkelijk verkennen vanuit Casa Cavour?",
-    risposta: "Ja. De ligging van Bertinoro is strategisch: Ravenna op 40 km, Rimini op 60 km, San Marino op 50 km, Bologna op 70 km. Casa Cavour is het perfecte vertrekpunt voor een rondreis langs zee, heuvels en kunststeden.",
+    id: "cosa-fare-bertinoro",
+    domanda: "Wat te doen in Bertinoro tijdens een weekend?",
+    risposta: "Het historische centrum is in een paar uur te voet te verkennen, tussen de Rocca, de Colonna delle Anelle en het panoramische uitkijkpunt over de Povlakte. In de omgeving liggen de wijnkelders van de Wijn- en Smakenroute en de dorpen Polenta, Meldola en Longiano. Casa Cavour is de praktische uitvalsbasis om beide te combineren: een volledig uitgeruste keuken om wijn en lokale producten mee naar huis te nemen, en self check-in waarmee je terugkeertijd vrij blijft na een diner in een osteria of een wijnproeverij die uitloopt.",
+  },
+  {
+    id: "giardino-privato",
+    domanda: "Heeft Casa Cavour een privétuin in de heuvels van Romagna?",
+    risposta: "Ja. De tuin is privé en exclusief voor het appartement, niet gedeeld met andere units, met tafel en stoelen om buiten te eten. Handig voor een diner als koppel zonder reservering, om je hond vrij te laten rondlopen, of gewoon om van de Romagnoolse heuvels te genieten zonder het huis te verlaten. Het ligt op een steenworp afstand van het historische centrum van Bertinoro, dus niet geïsoleerd zoals vaak het geval is bij agriturismi met meer grond maar minder voorzieningen in de buurt.",
+  },
+  {
+    id: "animali-ammessi",
+    domanda: "Accepteert Casa Cavour huisdieren in Romagna?",
+    risposta: "Ja, zonder extra kosten. De privétuin laat je hond vrij rondlopen, de uitgeruste keuken is ook handig om de maaltijden van je huisdier te regelen, en self check-in met smartlock voorkomt de stress van strikte aankomsttijden na een lange autorit. De ligging in het historische centrum van Bertinoro betekent dat je direct vanaf de voordeur een wandeling kunt maken.",
   },
   {
     id: "staccare-bologna",
@@ -52,10 +62,5 @@ export const qanda = [
     id: "smart-working",
     domanda: "Is Casa Cavour geschikt om een paar dagen op afstand te werken?",
     risposta: "Ja. Het appartement beschikt over wifi, comfortabele ruimtes en een volledig uitgeruste keuken zodat je zelfstandig je maaltijden kunt regelen. Werk met uitzicht op de Romagnoolse heuvels en na werktijd heb je een buitengewoon gebied om te verkennen.",
-  },
-  {
-    id: "appartamento-cucina",
-    domanda: "Is er een appartement met keuken voor kortetermijnverhuur in Bertinoro?",
-    risposta: "Casa Cavour is precies dat — een charmant appartement in het historische centrum van Bertinoro met een volledig uitgeruste keuken, ideaal voor kwaliteitsvolle korte verblijven. Je kunt rechtstreeks boeken via Airbnb.",
   },
 ];
