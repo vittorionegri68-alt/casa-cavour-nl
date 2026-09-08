@@ -498,10 +498,40 @@ function About() {
   );
 }
 
+function slugify(id) {
+  return String(id)
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
 function Blog() {
   const [open, setOpen] = useState(null);
+  const [shared, setShared] = useState(null);
   const visibili = posts.filter(p => p.attivo).sort((a, b) => new Date(b.data) - new Date(a.data));
   const sectionRef = useRef(null);
+
+  async function condividi(post) {
+    const url = `https://nl.casa-cavour.com/post/${slugify(post.id)}.html`;
+    if (navigator.share) {
+      try {
+        await navigator.share({ title: post.titolo, text: `${post.sommario}\n\n${url}` });
+        return;
+      } catch {
+        return;
+      }
+    }
+    try {
+      await navigator.clipboard.writeText(url);
+      setShared(post.id);
+      setTimeout(() => setShared(null), 2000);
+    } catch {
+      window.prompt("Kopieer de link van het artikel:", url);
+    }
+  }
 
   const handleApri = (id) => {
     setOpen(id);
@@ -555,12 +585,20 @@ function Blog() {
           return (
             <Reveal>
               <div style={{ maxWidth: 760, margin: "0 auto" }}>
-                <button onClick={handleChiudi}
-                  style={{ background: "none", border: `1px solid ${C.border}`, padding: "0.45rem 1rem", fontSize: "0.72rem", color: C.textMid, fontFamily: "'DM Sans',sans-serif", letterSpacing: "0.1em", textTransform: "uppercase", cursor: "pointer", marginBottom: "2.5rem", transition: "all 0.2s" }}
-                  onMouseEnter={e => { e.currentTarget.style.borderColor = C.gold; e.currentTarget.style.color = C.gold; }}
-                  onMouseLeave={e => { e.currentTarget.style.borderColor = C.border; e.currentTarget.style.color = C.textMid; }}>
-                  ← Alle artikelen
-                </button>
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: "1rem", marginBottom: "2.5rem", flexWrap: "wrap" }}>
+                  <button onClick={handleChiudi}
+                    style={{ background: "none", border: `1px solid ${C.border}`, padding: "0.45rem 1rem", fontSize: "0.72rem", color: C.textMid, fontFamily: "'DM Sans',sans-serif", letterSpacing: "0.1em", textTransform: "uppercase", cursor: "pointer", transition: "all 0.2s" }}
+                    onMouseEnter={e => { e.currentTarget.style.borderColor = C.gold; e.currentTarget.style.color = C.gold; }}
+                    onMouseLeave={e => { e.currentTarget.style.borderColor = C.border; e.currentTarget.style.color = C.textMid; }}>
+                    ← Alle artikelen
+                  </button>
+                  <button onClick={() => condividi(post)}
+                    style={{ background: "none", border: `1px solid ${C.border}`, padding: "0.45rem 1rem", fontSize: "0.72rem", color: C.textMid, fontFamily: "'DM Sans',sans-serif", letterSpacing: "0.1em", textTransform: "uppercase", cursor: "pointer", transition: "all 0.2s" }}
+                    onMouseEnter={e => { e.currentTarget.style.borderColor = C.gold; e.currentTarget.style.color = C.gold; }}
+                    onMouseLeave={e => { e.currentTarget.style.borderColor = C.border; e.currentTarget.style.color = C.textMid; }}>
+                    {shared === post.id ? "Link gekopieerd ✓" : "Delen ↗"}
+                  </button>
+                </div>
                 <div style={{ display: "flex", gap: "1rem", alignItems: "center", marginBottom: "1.25rem" }}>
                   <span style={{ fontSize: "0.62rem", letterSpacing: "0.18em", color: C.gold, textTransform: "uppercase", fontFamily: "'DM Sans',sans-serif", border: `1px solid ${C.border}`, padding: "0.2rem 0.6rem" }}>{post.categoria}</span>
                   <span style={{ fontSize: "0.68rem", color: C.textSoft, fontFamily: "'DM Sans',sans-serif" }}>{new Date(post.data).toLocaleDateString("nl-NL", { day: "numeric", month: "long", year: "numeric" })}</span>
@@ -745,6 +783,20 @@ function Footer() {
               Airbnb ↗
             </a>
             <div style={{ marginTop: "1.25rem", fontFamily: "'DM Sans',sans-serif", fontSize: "0.74rem", color: C.textSoft, lineHeight: 1.7 }}>Beschikbaar op Airbnb.<br />Tot 4 gasten.</div>
+            <div style={{ display: "flex", gap: "0.6rem", marginTop: "1rem" }}>
+              <a href="https://www.instagram.com/bnb_bertinoro/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
+                style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 34, height: 34, borderRadius: "50%", border: `1.5px solid ${C.border}`, color: C.textSoft, transition: "all 0.2s" }}
+                onMouseEnter={e => { e.currentTarget.style.borderColor = C.gold; e.currentTarget.style.color = C.gold; }}
+                onMouseLeave={e => { e.currentTarget.style.borderColor = C.border; e.currentTarget.style.color = C.textSoft; }}>
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.8"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4.2" /><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none" /></svg>
+              </a>
+              <a href="https://www.facebook.com/profile.php?id=61577458010505" target="_blank" rel="noopener noreferrer" aria-label="Facebook"
+                style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 34, height: 34, borderRadius: "50%", border: `1.5px solid ${C.border}`, color: C.textSoft, transition: "all 0.2s" }}
+                onMouseEnter={e => { e.currentTarget.style.borderColor = C.gold; e.currentTarget.style.color = C.gold; }}
+                onMouseLeave={e => { e.currentTarget.style.borderColor = C.border; e.currentTarget.style.color = C.textSoft; }}>
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M15 3h-2.5C10 3 8.5 4.6 8.5 7.2V10H6v3.2h2.5V21h3.3v-7.8h2.6l.5-3.2h-3.1V7.5c0-.9.3-1.5 1.6-1.5H15V3z" /></svg>
+              </a>
+            </div>
             <a href="https://search.google.com/local/writereview?placeid=ChIJv7pX_ManLBMRfb0j1GUxPbs" target="_blank" rel="noopener noreferrer"
               style={{ display: "block", marginTop: "1rem", fontFamily: "'DM Sans',sans-serif", fontSize: "0.74rem", color: C.textSoft, textDecoration: "none", transition: "color 0.2s" }}
               onMouseEnter={e => e.currentTarget.style.color = C.gold}
