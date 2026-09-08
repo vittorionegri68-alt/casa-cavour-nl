@@ -508,6 +508,36 @@ function slugify(id) {
     .replace(/^-+|-+$/g, "");
 }
 
+// Interpreteert de [[label|target-id]] syntax in de tekst van een blog
+// paragraaf en zet die om in klikbare links naar de statische pagina van het
+// doelartikel (dezelfde syntax die generate-blog-pages.mjs gebruikt voor de
+// /post/ pagina's). Hergebruikt dezelfde slugify die al voor de deelknop
+// wordt gebruikt, zodat beide implementaties gesynchroniseerd blijven. De
+// link opent altijd in een nieuw tabblad, zodat de lezer nooit de plek
+// kwijtraakt in het artikel dat hij aan het lezen is.
+const INTERNAL_LINK_RE = /\[\[([^\]|]+)\|([^\]]+)\]\]/g;
+function renderTestoConLink(testo) {
+  const parts = [];
+  let lastIndex = 0;
+  let match;
+  let key = 0;
+  INTERNAL_LINK_RE.lastIndex = 0;
+  while ((match = INTERNAL_LINK_RE.exec(testo)) !== null) {
+    if (match.index > lastIndex) parts.push(testo.slice(lastIndex, match.index));
+    const [, label, targetId] = match;
+    const href = `https://nl.casa-cavour.com/post/${slugify(targetId)}.html`;
+    parts.push(
+      <a key={key++} href={href} target="_blank" rel="noopener noreferrer"
+        style={{ color: C.gold, textDecoration: "underline", textDecorationColor: "rgba(160,120,42,0.4)", textUnderlineOffset: "2px" }}>
+        {label}
+      </a>
+    );
+    lastIndex = INTERNAL_LINK_RE.lastIndex;
+  }
+  if (lastIndex < testo.length) parts.push(testo.slice(lastIndex));
+  return parts;
+}
+
 function Blog() {
   const [open, setOpen] = useState(null);
   const [shared, setShared] = useState(null);
@@ -606,18 +636,23 @@ function Blog() {
                 <h2 style={{ fontFamily: "'Cormorant Garamond','Playfair Display',serif", fontSize: "clamp(1.8rem,4vw,2.8rem)", color: C.text, fontWeight: 700, lineHeight: 1.1, marginBottom: "1rem", letterSpacing: "-0.02em" }}>{post.titolo}</h2>
                 <p style={{ fontSize: "1rem", color: C.gold, lineHeight: 1.75, fontFamily: "'Cormorant Garamond','Playfair Display',serif", fontStyle: "italic", marginBottom: "2rem", paddingBottom: "2rem", borderBottom: `1px solid ${C.border}` }}>{post.sommario}</p>
                 {post.contenuto.map((blocco, i) => {
-                  if (blocco.tipo === "paragrafo") return <p key={i} style={{ fontSize: "0.95rem", color: C.textMid, lineHeight: 1.9, fontFamily: "'DM Sans',sans-serif", marginBottom: "1.25rem" }}>{blocco.testo}</p>;
+                  if (blocco.tipo === "paragrafo") return <p key={i} style={{ fontSize: "0.95rem", color: C.textMid, lineHeight: 1.9, fontFamily: "'DM Sans',sans-serif", marginBottom: "1.25rem" }}>{renderTestoConLink(blocco.testo)}</p>;
                   if (blocco.tipo === "titoletto") return <h3 key={i} style={{ fontFamily: "'Cormorant Garamond','Playfair Display',serif", fontSize: "1.35rem", color: C.text, fontWeight: 700, marginBottom: "0.6rem", marginTop: "2rem", letterSpacing: "-0.01em" }}>{blocco.testo}</h3>;
                   if (blocco.tipo === "link") {
                     const isInstagram = blocco.testo.includes("instagram");
                     const isFacebook = blocco.testo.includes("facebook");
-                    const label = blocco.etichetta ? blocco.etichetta : isInstagram ? "📸 Instagram" : isFacebook ? "👍 Facebook" : "🔗 Link";
+                    const label = blocco.etichetta ? blocco.etichetta : isInstagram ? "Instagram" : isFacebook ? "Facebook" : "Link";
+                    const icona = isInstagram
+                      ? <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.8"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4.2" /><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none" /></svg>
+                      : isFacebook
+                      ? <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M15 3h-2.5C10 3 8.5 4.6 8.5 7.2V10H6v3.2h2.5V21h3.3v-7.8h2.6l.5-3.2h-3.1V7.5c0-.9.3-1.5 1.6-1.5H15V3z" /></svg>
+                      : null;
                     return (
                       <a key={i} href={blocco.testo} target="_blank" rel="noopener noreferrer"
                         style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: "transparent", color: C.gold, padding: "0.6rem 1.2rem", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none", fontFamily: "'DM Sans',sans-serif", border: `1.5px solid ${C.gold}`, marginRight: "0.75rem", marginBottom: "0.5rem", transition: "all 0.2s" }}
                         onMouseEnter={e => { e.currentTarget.style.background = C.gold; e.currentTarget.style.color = "#fff"; }}
                         onMouseLeave={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = C.gold; }}>
-                        {label} ↗
+                        {icona}{label} ↗
                       </a>
                     );
                   }
