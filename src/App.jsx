@@ -807,7 +807,7 @@ function Footer() {
         </div>
         <div style={{ borderTop: `1px solid ${C.border}`, paddingTop: "1.5rem", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "0.75rem" }}>
           <div style={{ fontSize: "0.72rem", color: C.textSoft, fontFamily: "'DM Sans',sans-serif" }}>© {new Date().getFullYear()} Casa Cavour · Bertinoro · Alle rechten voorbehouden</div>
-          <a href="/privacy.html" style={{ fontSize: "0.72rem", color: C.textSoft, fontFamily: "'DM Sans',sans-serif", textDecoration: "none", transition: "color 0.2s" }}
+          <a href="https://www.casa-cavour.com/privacy.html" style={{ fontSize: "0.72rem", color: C.textSoft, fontFamily: "'DM Sans',sans-serif", textDecoration: "none", transition: "color 0.2s" }}
             onMouseEnter={e => e.target.style.color=C.gold} onMouseLeave={e => e.target.style.color=C.textSoft}>
             Privacy Policy
           </a>
