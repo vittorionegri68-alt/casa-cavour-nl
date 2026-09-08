@@ -40,7 +40,7 @@ const INSTAGRAM_URL = "https://www.instagram.com/bnb_bertinoro/";
 const FACEBOOK_URL = "https://www.facebook.com/profile.php?id=61577458010505";
 
 function isSocialBlock(b) {
-  if (b.tipo === "titoletto" && b.testo.trim().toLowerCase() === "volg ons op social media") return true;
+  if (b.tipo === "titoletto" && b.testo.toLowerCase().includes("social")) return true;
   if (b.tipo === "link" && (b.testo.includes("instagram.com") || b.testo.includes("facebook.com"))) return true;
   return false;
 }
@@ -49,24 +49,35 @@ function isBlogHomeLink(b) {
   return b.tipo === "link" && b.testo.includes("casa-cavour.com/#blog");
 }
 
-// posts.jsx contiene tipicamente due link verso #blog per articolo (uno prima
-// di "Leggi anche", uno subito dopo, quest'ultimo senza etichetta quindi
-// renderizzato come URL grezzo): risultato duplicato e poco leggibile sulla
-// pagina statica. Qui vengono rimossi entrambi e reinserito un solo link con
-// etichetta corretta, subito dopo il paragrafo di "Leggi anche" quando
-// presente, altrimenti in coda al contenuto.
+// De "Lees ook"-links (1-2 per artikel, naar echt gerelateerde artikelen, met
+// een kort label over het besproken onderwerp) worden nu met de hand
+// geschreven direct in posts.js, meteen na de "Lees ook"-alinea. Dit script
+// genereert ze niet meer automatisch: het laat ze ongewijzigd door, identiek
+// zowel hier als in de live React-rendering, omdat ze in de gedeelde inhoud
+// leven in plaats van in een aparte transformatie per omgeving.
+//
+// Het enige dat deze functie nog doet is een vangnet: als een artikel (nu of
+// in de toekomst) geen enkele link na "Lees ook" heeft — omdat er nog geen
+// zinvolle correlatie met de hand is geschreven — wordt een enkele knop
+// "Alle artikelen" naar #blog ingevoegd. Elke #blog-link die per ongeluk
+// elders in de inhoud staat, wordt hoe dan ook verwijderd, om dubbels met dit
+// vangnet te voorkomen.
+const FALLBACK_ALLE_ARTIKELEN = { tipo: "link", testo: `${SITE_URL}/#blog`, etichetta: "Alle artikelen" };
+
 function buildContenuto(post) {
   const filtered = post.contenuto.filter((b) => !isSocialBlock(b) && !isBlogHomeLink(b));
-  const linkBlogHome = { tipo: "link", testo: `${SITE_URL}/#blog`, etichetta: "Ontdek meer artikelen over het gebied" };
 
   const idx = filtered.findIndex((b) => b.tipo === "titoletto" && b.testo.trim().toLowerCase() === "lees ook");
   if (idx === -1) {
-    filtered.push(linkBlogHome);
+    filtered.push(FALLBACK_ALLE_ARTIKELEN);
     return filtered;
   }
-  let insertAt = idx + 1;
-  if (filtered[insertAt] && filtered[insertAt].tipo === "paragrafo") insertAt++;
-  filtered.splice(insertAt, 0, linkBlogHome);
+  let cursor = idx + 1;
+  if (filtered[cursor] && filtered[cursor].tipo === "paragrafo") cursor++;
+  const heeftGerelateerdeLinks = filtered[cursor] && filtered[cursor].tipo === "link";
+  if (!heeftGerelateerdeLinks) {
+    filtered.splice(cursor, 0, FALLBACK_ALLE_ARTIKELEN);
+  }
   return filtered;
 }
 
@@ -81,6 +92,35 @@ function escapeHtml(str) {
 
 function escapeAttr(str) {
   return escapeHtml(str);
+}
+
+// Sintassi per i link interni tra articoli, usata dentro il campo "testo" dei
+// blocchi paragrafo in posts.js: [[etichetta visibile|id-articolo-target]].
+// L'id è quello grezzo del post in posts.js (non lo slug). Stessa sintassi e
+// stessa implementazione dei repo IT/EN, interpretata anche dal rendering
+// React live (src/App.jsx, funzione renderTestoConLink).
+const INTERNAL_LINK_RE = /\[\[([^\]|]+)\|([^\]]+)\]\]/g;
+
+function renderParagraphWithLinks(testo, idToSlug) {
+  let result = "";
+  let lastIndex = 0;
+  let match;
+  INTERNAL_LINK_RE.lastIndex = 0;
+  while ((match = INTERNAL_LINK_RE.exec(testo)) !== null) {
+    const [full, label, targetId] = match;
+    result += escapeHtml(testo.slice(lastIndex, match.index));
+    const slug = idToSlug.get(targetId);
+    if (!slug) {
+      throw new Error(
+        `generate-blog-pages: interne link naar id "${targetId}" niet gevonden onder de actieve artikelen (label: "${label}"). Corrigeer de id in posts.js.`
+      );
+    }
+    const href = `${SITE_URL}/post/${slug}.html`;
+    result += `<a class="inline-link" href="${escapeAttr(href)}" target="_blank" rel="noopener noreferrer">${escapeHtml(label)}</a>`;
+    lastIndex = INTERNAL_LINK_RE.lastIndex;
+  }
+  result += escapeHtml(testo.slice(lastIndex));
+  return result;
 }
 
 function slugify(id) {
@@ -116,9 +156,9 @@ async function loadPosts() {
   }
 }
 
-function renderContentBlock(b) {
+function renderContentBlock(b, idToSlug) {
   if (b.tipo === "paragrafo") {
-    return `      <p>${escapeHtml(b.testo)}</p>`;
+    return `      <p>${renderParagraphWithLinks(b.testo, idToSlug)}</p>`;
   }
   if (b.tipo === "titoletto") {
     return `      <h2>${escapeHtml(b.testo)}</h2>`;
@@ -138,14 +178,14 @@ function renderContentBlock(b) {
   return null;
 }
 
-function renderPage(post) {
+function renderPage(post, idToSlug) {
   const slug = post.slug;
   const url = `${SITE_URL}/post/${slug}.html`;
   const title = `${post.titolo} | Casa Cavour Bertinoro`;
   const description = post.sommario;
   const dateIso = new Date(post.data).toISOString();
 
-  const bodyBlocks = buildContenuto(post).map(renderContentBlock).filter(Boolean).join("\n");
+  const bodyBlocks = buildContenuto(post).map((b) => renderContentBlock(b, idToSlug)).filter(Boolean).join("\n");
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -203,6 +243,8 @@ function renderPage(post) {
       h2{font-family:Georgia,serif;font-size:1.35rem;margin:2rem 0 0.6rem;}
       p{color:var(--textMid);font-size:0.98rem;margin-bottom:1.1rem;}
       .btn-link{display:inline-block;color:var(--gold);border:1.5px solid var(--gold);padding:0.55rem 1.1rem;font-size:0.78rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;margin:0.25rem 0.5rem 0.25rem 0;}
+      .inline-link{color:var(--gold);text-decoration:underline;text-decoration-color:rgba(160,120,42,0.4);text-underline-offset:2px;}
+      .inline-link:hover{text-decoration-color:var(--gold);}
       .ig-cta{margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border);text-align:center;}
       .ig-cta p{color:var(--textMid);font-size:0.92rem;margin-bottom:1rem;}
       .ig-cta-icons{display:flex;justify-content:center;gap:1rem;}
@@ -294,6 +336,8 @@ async function main() {
     p.slug = slug;
   }
 
+  const idToSlug = new Map(visibili.map((p) => [p.id, p.slug]));
+
   mkdirSync(OUT_DIR, { recursive: true });
 
   // Rimuove pagine orfane (articoli disattivati o rinominati) prima di rigenerare,
@@ -306,7 +350,7 @@ async function main() {
   }
 
   for (const post of visibili) {
-    const html = renderPage(post);
+    const html = renderPage(post, idToSlug);
     writeFileSync(join(OUT_DIR, `${post.slug}.html`), html, "utf8");
   }
 
