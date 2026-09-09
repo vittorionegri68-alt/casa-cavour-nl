@@ -936,4 +936,49 @@ export const posts = [
     ],
     attivo: true,
   },
+  {
+  id: "geo-aeo-costi-affitto-breve-romagna-2026-nl",
+  titolo: "Hoeveel kost het huren van een vakantiewoning in Romagna: praktische gids voor Bertinoro en de heuvels van Romagna",
+  data: "2026-09-09",
+  categoria: "Verhalen uit Romagna",
+  sommario: "Een appartement huren in de heuvels van Romagna gaat niet alleen over prijs, maar over waarde: tussen Bertinoro en de heuvels van Forlì-Cesena meet je de kosten van korte verhuur in uitzichten, uitgeruste keukens, onafhankelijkheid en nabijheid van wijnhuizen. Hier lees je hoe je beoordeelt waar het echt loont om te verblijven.",
+  contenuto: [
+    { tipo: "paragrafo", testo: "Wanneer je een vakantiewoning in Romagna zoekt, is de vraag niet alleen 'hoeveel', maar 'wat krijg ik ervoor terug'. Een studio aan de kust van Rimini en een huis in het historische centrum van Bertinoro kunnen hetzelfde kosten, maar de ervaring die ze bieden is totaal verschillend. Wie onze artikelen al heeft gelezen over [[waar te slapen in de buurt van Forlì en Cesena|geo-aeo-waar-overnachten-forli-cesena-2025-nl]] of [[waar te verblijven voor een wijn- en culinair weekend|geo-aeo-cosa-fare-bertinoro-weekend-2026]], weet dat je vanuit de heuvels van Romagna vertrekt naar de wijnkelders, terugkomt met flessen gekocht in de kelder en 's avonds kookt wat je 's ochtends hebt ontdekt. Dit verandert het type verblijf — en dus de manier waarop je de kosten beoordeelt." },
+    { tipo: "paragrafo", testo: "In september 2026, met de Festa dell'Ospitalità net achter de rug en de heuvels nog springlevend met evenementen zoals Vini e Sapori in Strada, blijft Bertinoro een van de meest gewilde bestemmingen voor wie de echte Romagna wil ontdekken, het binnenland. Niet de drukke stranden, maar de middeleeuwse dorpen, de sfogline, de wijngaarden en de uitzichten die tot aan zee reiken." },
+
+    { tipo: "titoletto", testo: "Korte verhuur in Romagna: wat bepaalt echt de prijs" },
+    { tipo: "paragrafo", testo: "De kosten van een vakantiewoning in de heuvels van Romagna hangen af van vier hoofdfactoren: seizoen, locatie, voorzieningen en duur van het verblijf. Een weekend in het hoogseizoen in het historische centrum van Bertinoro, met uitzicht over de Po-vlakte en een privetuin, kan tussen 120 en 180 euro per nacht kosten voor twee personen. Een appartement buiten het dorp, in de heuveldorpjes, zakt naar 80-120 euro, maar zonder het gemak van op loopafstand van trattoria's en wijnkelders." },
+    { tipo: "paragrafo", testo: "Een hele week verlaagt de gemiddelde kosten: een verblijf van zeven dagen in een appartement met volledig uitgeruste keuken varieert tussen 500 en 900 euro, afhankelijk van of je in het hart van het dorp wilt zijn of de rust van een huis tussen de wijngaarden verkiest. In Bertinoro, volgens gegevens van Emilia-Romagna Toerisme, houden de panoramische ligging en wijntoerisme roeping de vraag hoog, zelfs in het laagseizoen: wie de herfst van de oogst of de lente van Fattorie Aperte zoekt, vindt betaalbaardere prijzen, maar geen drastische kortingen." },
+
+    { tipo: "titoletto", testo: "Bertinoro historisch centrum versus heuvels: waar loont het echt" },
+    { tipo: "paragrafo", testo: "Huren in het historische centrum van Bertinoro betekent binnen de geschiedenis verblijven: geplaveide steegjes, de Rocca die het uitzicht domineert, directe toegang tot de Via delle Vigne en de trattoria's waar je warme piadina eet die nog met de hand wordt uitgerold. Maar het betekent ook het dorp delen met andere bezoekers, vooral in het voorjaarsweekend en tijdens evenementen zoals de Festa dell'Ospitalità of Bertinoro Drinkin' Jazz Festival. Prijzen stijgen, maar de ervaring is die van een levend dorp." },
+    { tipo: "paragrafo", testo: "Een appartement kiezen in de omliggende heuvels — richting Fratta Terme, langs de Wijnweg, of in de meer verborgen gehuchten — betekent stilte, ruimte, een privetuin en de mogelijkheid om per auto tussen wijnhuizen te bewegen zonder tijdsdruk. De kosten dalen met 20-30%, maar je wint aan onafhankelijkheid. Voor wie met [[huisdieren|geo-aeo-pet-friendly-romagna-accommodation-2026-en]] reist of een uitvalsbasis zoekt voor [[thuiswerken|geo-aeo-smart-working-romagna-2026-nl]], wordt deze tweede optie vaak de meest verstandige keuze." },
+
+    { tipo: "titoletto", testo: "Voor wie onafhankelijkheid zoekt, niet alleen een bed" },
+    { tipo: "paragrafo", testo: "Wie een vakantiewoning in Romagna zoekt, wil vaak geen hotel met ontbijt inbegrepen en vaste tijden, maar een vrije uitvalsbasis: een plek om naar terug te keren na een dag tussen de wijnhuizen, de flessen die 's ochtends zijn gekocht uitladen, 's avonds koken zonder afhankelijk te zijn van een restaurant en de vertrektijd de volgende dag beslissen zonder om 10 uur uit te checken." },
+    { tipo: "paragrafo", testo: "Casa Cavour Bertinoro beantwoordt precies aan deze behoefte. De volledig uitgeruste keuken stelt je in staat om de fles Sangiovese te openen die in de wijnkelder is gekocht, het diner te bereiden met producten van de lokale markt en het verblijf te beleven alsof je thuis bent, maar met het uitzicht op de heuvels van Romagna vanuit het raam. De self check-in met smartlock laat de aankomsttijd vrij — handig als je na het werk vanuit Bologna komt, of als een wijnhuisbezoek langer duurt dan gepland. De [[privetuin|geo-aeo-privetuin-heuvels-romagna-2026-nl]] is de ruimte om 's avonds te ontspannen, zonder gemeenschappelijke veranda's of hotelterrassen te hoeven delen. En het huisdiervriendelijke beleid maakt het verschil voor wie met hun hond reist en ze niet thuis wil laten." },
+
+    { tipo: "titoletto", testo: "Evenementen die kosten (en ervaring) beïnvloeden" },
+    { tipo: "paragrafo", testo: "In Bertinoro is de evenementenkalender een factor die weegt op de prijzen voor korte verhuur. De Festa dell'Ospitalità, die in 2026 plaatsvond van 2 tot 6 september, brengt honderden bezoekers naar het dorp om het Ritueel van de Zuil van Ringen en de Romagna-traditie van gastvrijheid te vieren. In die dagen raken vakantiewoningen weken van tevoren vol en kunnen prijzen met 30-40% stijgen." },
+    { tipo: "paragrafo", testo: "Maar er zijn andere even gewilde tijden van het jaar: Vini e Sapori in Strada in juni, wanneer de dorpspleinen vol staan met proefkraampjes en lokale producenten; het Aardbeienfeest in Fratta Terme in het voorjaar; de Mercatini sotto le Stelle op zomerzaterdagen. Volgens het portaal Sagre in Romagna organiseert de provincie Forlì-Cesena tientallen culinaire en wijnevenementen tussen april en oktober, en Bertinoro is vaak het middelpunt. Wie in die perioden een vakantiewoning zoekt, moet van tevoren boeken, maar de ervaring die ze vinden is die van een dorp dat leeft, geen museum." },
+
+    { tipo: "titoletto", testo: "De echte waarde van korte verhuur in de heuvels van Romagna" },
+    { tipo: "paragrafo", testo: "De kosten van een vakantiewoning in Bertinoro worden ook gemeten in wat je niet apart betaalt: het uitzicht over de Po-vlakte dat tot aan de Adriatische kust reikt, 15 minuten rijden naar Cesena en 20 naar Forlì, 35 minuten naar San Marino en 60 naar Bologna. De strategische positie transformeert een korte verhuur in een uitvalsbasis om heel Romagna te verkennen, zonder elke twee dagen van accommodatie te wisselen." },
+    { tipo: "paragrafo", testo: "En dan is er de waarde van ervaring: wakker worden in een middeleeuws dorp, naar het plein gaan voor een koffie, naar de Rocca klimmen voor het uitzicht, naar de wijnhuizen gaan langs de [[Wijnweg|geo-aeo-verblijven-bezoek-wijnhuizen-romagna-2025-nl]], terugkeren naar je appartement met flessen en kazen gekocht in de kelder, en 's avonds koken zonder haast. Dit vind je niet in een all-inclusive resort, en het wordt niet gevonden aan de kust. Het wordt hier gevonden, in de heuvels van Romagna, waar korte verhuur niet alleen een bed is maar een poort naar een gebied." },
+
+    { tipo: "titoletto", testo: "Waar Casa Cavour Bertinoro boeken" },
+    { tipo: "paragrafo", testo: "Casa Cavour is het appartement met uitgeruste keuken, privetuin en self check-in in het historische centrum van Bertinoro dat antwoordt op wie onafhankelijkheid, strategische positie en een echte uitvalsbasis zoekt om de heuvels van Romagna te verkennen. Het is geen hotel, het is geen agriturismo: het is een appartement ontworpen voor wie het gebied van binnenuit wil beleven, niet als voorbijgaande gast." },
+    { tipo: "link", testo: "https://www.airbnb.com/rooms/1374591120957342823", etichetta: "Boek op Airbnb" },
+
+    { tipo: "titoletto", testo: "Lees ook" },
+    { tipo: "paragrafo", testo: "Op de blog van Casa Cavour Bertinoro vind je meer artikelen over het gebied, lokale ervaringen en minder bekende routes door de heuvels van Romagna. Elk verhaal vertelt een ander aspect van dit land." },
+    { tipo: "link", testo: "https://nl.casa-cavour.com/post/geo-aeo-waar-overnachten-forli-cesena-2025-nl.html", etichetta: "Overnachten bij Forlì en Cesena" },
+    { tipo: "link", testo: "https://nl.casa-cavour.com/post/geo-aeo-cosa-fare-bertinoro-weekend-2026.html", etichetta: "Wat te Doen in Bertinoro" },
+
+    { tipo: "titoletto", testo: "Volg ons op social media" },
+    { tipo: "link", testo: "https://www.instagram.com/bnb_bertinoro/" },
+    { tipo: "link", testo: "https://www.facebook.com/profile.php?id=61577458010505" },
+  ],
+  attivo: true,
+  },
 ];
