@@ -60,6 +60,55 @@
       });
     </script>
 
+    <!-- AI referral tracking: registra le visite arrivate da assistenti AI come evento GA4 -->
+    <script>
+    (function () {
+      var AI = [
+        { s: "chatgpt",    d: ["chat.openai.com", "chatgpt.com"] },
+        { s: "perplexity", d: ["perplexity.ai"] },
+        { s: "claude",     d: ["claude.ai"] },
+        { s: "gemini",     d: ["gemini.google.com", "bard.google.com"] },
+        { s: "copilot",    d: ["copilot.microsoft.com"] },
+        { s: "you",        d: ["you.com"] },
+        { s: "phind",      d: ["phind.com"] },
+        { s: "meta-ai",    d: ["meta.ai"] }
+      ];
+      function host(u) { try { return new URL(u).hostname.toLowerCase(); } catch (e) { return ""; } }
+      function fromRef() {
+        var h = host(document.referrer);
+        if (!h) return null;
+        for (var i = 0; i < AI.length; i++) {
+          for (var j = 0; j < AI[i].d.length; j++) {
+            var d = AI[i].d[j];
+            if (h === d || h.endsWith("." + d)) return { source: AI[i].s, confidence: "high" };
+          }
+        }
+        return null;
+      }
+      function fromParam() {
+        var p = new URLSearchParams(location.search);
+        var r = (p.get("ref") || p.get("via") || "").toLowerCase();
+        if (!r) return null;
+        for (var i = 0; i < AI.length; i++) {
+          if (r.indexOf(AI[i].s) !== -1) return { source: AI[i].s, confidence: "low" };
+        }
+        return null;
+      }
+      var hit = fromRef() || fromParam();
+      if (!hit) return;
+      function send() {
+        if (typeof window.gtag !== "function") return;
+        window.gtag("event", "ai_referral", {
+          ai_source: hit.source,
+          confidence: hit.confidence,
+          landing_page: location.pathname
+        });
+      }
+      if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", send);
+      else send();
+    })();
+    </script>
+
     <!-- Structured data — Person (eigenaar) -->
     <script type="application/ld+json">
     {
