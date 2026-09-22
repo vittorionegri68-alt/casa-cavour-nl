@@ -79,7 +79,7 @@ function Nav() {
     return () => window.removeEventListener("scroll", h);
   }, []);
   const links = ["Appartement", "Locatie", "Ervaringen", "Recensies", "Blog", "V&A", "Contact"];
-  const ids   = ["appartement", "locatie", "ervaringen", "recensies", "blog", "qa"];
+  const ids   = ["appartement", "locatie", "ervaringen", "recensies", "blog", "qa", "contact"];
   return (
     <nav style={{
       position: "fixed", top: 0, left: 0, right: 0, zIndex: 200,
