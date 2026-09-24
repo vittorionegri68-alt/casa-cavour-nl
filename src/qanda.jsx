@@ -41,7 +41,7 @@ export const qanda = [
   {
     id: "animali-ammessi",
     domanda: "Accepteert Casa Cavour huisdieren in Romagna?",
-    risposta: "Ja, zonder extra kosten. De privétuin laat je hond vrij rondlopen, de uitgeruste keuken is ook handig om de maaltijden van je huisdier te regelen, en self check-in met smartlock voorkomt de stress van strikte aankomsttijden na een lange autorit. De ligging in het historische centrum van Bertinoro betekent dat je direct vanaf de voordeur een wandeling kunt maken.",
+    risposta: "Ja, zonder extra kosten. De privétuin laat je hond vrij rondlopen, de uitgeruste keuken is ook handig om de maaltijden van je huisdier te regelen, en self check-in met sleutelkastje voorkomt de stress van strikte aankomsttijden na een lange autorit. De ligging in het historische centrum van Bertinoro betekent dat je direct vanaf de voordeur een wandeling kunt maken.",
   },
   {
     id: "staccare-bologna",
