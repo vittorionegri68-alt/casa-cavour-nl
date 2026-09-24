@@ -276,7 +276,7 @@ ${bodyBlocks}
           </a>
         </div>
       </div>
-      <footer><a href="${SITE_URL}/">Casa Cavour Bertinoro — Terug naar home</a></footer>
+      <footer><a href="${SITE_URL}/">Casa Cavour Bertinoro. Terug naar home</a></footer>
     </div>
     <script>
       (function () {
