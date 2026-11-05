@@ -656,6 +656,20 @@ function Blog() {
                       </a>
                     );
                   }
+                  if (blocco.tipo === "download") {
+                    return (
+                      <div key={i} style={{ display: "flex", gap: "1rem", flexWrap: "wrap", margin: "1.5rem 0" }}>
+                        {blocco.src1 && (
+                          <a href={blocco.src1} download style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: C.gold, color: "#fff", padding: "0.75rem 1.5rem", fontSize: "0.75rem", fontWeight: 800, letterSpacing: "0.12em", textTransform: "uppercase", textDecoration: "none", fontFamily: "'DM Sans',sans-serif", transition: "background 0.2s" }}
+                            onMouseEnter={e => e.currentTarget.style.background = "#8a6520"} onMouseLeave={e => e.currentTarget.style.background = C.gold}>↓ {blocco.label1}</a>
+                        )}
+                        {blocco.src2 && (
+                          <a href={blocco.src2} download style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: "transparent", color: C.gold, padding: "0.75rem 1.5rem", fontSize: "0.75rem", fontWeight: 800, letterSpacing: "0.12em", textTransform: "uppercase", textDecoration: "none", fontFamily: "'DM Sans',sans-serif", border: `1.5px solid ${C.gold}`, transition: "all 0.2s" }}
+                            onMouseEnter={e => { e.currentTarget.style.background = C.gold; e.currentTarget.style.color = "#fff"; }} onMouseLeave={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = C.gold; }}>↓ {blocco.label2}</a>
+                        )}
+                      </div>
+                    );
+                  }
                   return null;
                 })}
                 <div style={{ marginTop: "3rem", padding: "2rem", background: C.bg3, borderLeft: `3px solid ${C.gold}` }}>
