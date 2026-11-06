@@ -543,6 +543,16 @@ function Blog() {
   const [shared, setShared] = useState(null);
   const visibili = posts.filter(p => p.attivo).sort((a, b) => new Date(b.data) - new Date(a.data));
   const sectionRef = useRef(null);
+  // GA4: l'apertura di un articolo nella home vale come visita alla sua pagina /post/
+  useEffect(() => {
+    if (open === null || typeof window.gtag !== "function") return;
+    const post = posts.find(p => p.id === open);
+    if (!post) return;
+    window.gtag("event", "page_view", {
+      page_location: `https://nl.casa-cavour.com/post/${slugify(post.id)}.html`,
+      page_title: `${post.titolo} | Casa Cavour Bertinoro`,
+    });
+  }, [open]);
 
   async function condividi(post) {
     const url = `https://nl.casa-cavour.com/post/${slugify(post.id)}.html`;

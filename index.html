@@ -109,6 +109,28 @@
     })();
     </script>
 
+    <!-- Download tracking: la misurazione avanzata di GA4 non registra i download di immagini (jpg, png, webp, gif, svg) -->
+    <script>
+    (function () {
+      var EXT = /\.(jpe?g|png|webp|gif|svg)$/i;
+      document.addEventListener("click", function (e) {
+        var a = e.target && e.target.closest ? e.target.closest("a[href]") : null;
+        if (!a || typeof window.gtag !== "function") return;
+        var url;
+        try { url = new URL(a.getAttribute("href"), location.href); } catch (err) { return; }
+        var name = url.pathname.split("/").pop();
+        if (!EXT.test(name)) return;
+        window.gtag("event", "file_download", {
+          file_name: name,
+          file_extension: name.split(".").pop().toLowerCase(),
+          link_url: url.href,
+          link_text: (a.textContent || "").replace(/\s+/g, " ").trim().slice(0, 100)
+        });
+      }, true);
+    })();
+    </script>
+    <!-- /tracciamento GA4 -->
+
     <!-- Structured data — Person (eigenaar) -->
     <script type="application/ld+json">
     {
