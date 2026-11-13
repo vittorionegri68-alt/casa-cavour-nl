@@ -1,19 +1,19 @@
 import { useState, useEffect, useRef } from "react";
 import { qanda } from "./qanda.jsx";
 import { posts } from "./posts.js";
-import poster3 from "./assets/poster3.jpg";
-import poster6 from "./assets/poster6.jpg";
-import room1 from "./assets/rooms/Cucina_1.jpg";
-import room2 from "./assets/rooms/Cucina_2.jpg";
-import room3 from "./assets/rooms/Room_1.jpg";
-import room4 from "./assets/rooms/Room_2.jpg";
-import room5 from "./assets/rooms/Room_3.jpg";
-import room6 from "./assets/rooms/Bagno_1.jpg";
-import room7 from "./assets/rooms/Giardino_1.jpg";
-import room8 from "./assets/rooms/Giardino_2.jpg";
-import room9 from "./assets/rooms/Panorama_1.jpg";
-import room10 from "./assets/rooms/Panorama_2.jpg";
-import room11 from "./assets/rooms/Panorama_3.jpg";
+import poster3 from "./assets/poster3.webp";
+import poster6 from "./assets/poster6.webp";
+import room1 from "./assets/rooms/Cucina_1.webp";
+import room2 from "./assets/rooms/Cucina_2.webp";
+import room3 from "./assets/rooms/Room_1.webp";
+import room4 from "./assets/rooms/Room_2.webp";
+import room5 from "./assets/rooms/Room_3.webp";
+import room6 from "./assets/rooms/Bagno_1.webp";
+import room7 from "./assets/rooms/Giardino_1.webp";
+import room8 from "./assets/rooms/Giardino_2.webp";
+import room9 from "./assets/rooms/Panorama_1.webp";
+import room10 from "./assets/rooms/Panorama_2.webp";
+import room11 from "./assets/rooms/Panorama_3.webp";
 import bertinoro from "./assets/rooms/Logo.jpg";
 
 const IMG = {
@@ -224,19 +224,19 @@ function Apartment() {
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "5rem", alignItems: "start" }} className="apt-grid">
           <Reveal>
             <div style={{ marginBottom: "0.75rem", overflow: "hidden", boxShadow: C.shadow }}>
-              <img src={rooms[active].src} alt="Casa Cavour appartement" style={{ width: "100%", aspectRatio: "4/3", objectFit: "cover", display: "block", transition: "opacity 0.35s" }} />
+              <img src={rooms[active].src} loading="lazy" decoding="async" alt="Casa Cavour appartement" style={{ width: "100%", aspectRatio: "4/3", objectFit: "cover", display: "block", transition: "opacity 0.35s" }} />
             </div>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(6,1fr)", gap: "0.35rem", marginBottom: "0.35rem" }}>
               {rooms.slice(0,6).map((r,i) => (
                 <div key={i} onClick={() => setActive(i)} style={{ cursor: "pointer", overflow: "hidden", border: active===i ? `2px solid ${C.gold}` : "2px solid transparent", transition: "border 0.2s" }}>
-                  <img src={r.src} alt="" style={{ width: "100%", aspectRatio: "1", objectFit: "cover", display: "block", filter: active===i?"none":"brightness(0.7) saturate(0.8)", transition: "filter 0.2s" }} />
+                  <img src={r.src} loading="lazy" decoding="async" alt="" style={{ width: "100%", aspectRatio: "1", objectFit: "cover", display: "block", filter: active===i?"none":"brightness(0.7) saturate(0.8)", transition: "filter 0.2s" }} />
                 </div>
               ))}
             </div>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(5,1fr)", gap: "0.35rem" }}>
               {rooms.slice(6).map((r,i) => (
                 <div key={i+6} onClick={() => setActive(i+6)} style={{ cursor: "pointer", overflow: "hidden", border: active===i+6 ? `2px solid ${C.gold}` : "2px solid transparent", transition: "border 0.2s" }}>
-                  <img src={r.src} alt="" style={{ width: "100%", aspectRatio: "1", objectFit: "cover", display: "block", filter: active===i+6?"none":"brightness(0.7) saturate(0.8)", transition: "filter 0.2s" }} />
+                  <img src={r.src} loading="lazy" decoding="async" alt="" style={{ width: "100%", aspectRatio: "1", objectFit: "cover", display: "block", filter: active===i+6?"none":"brightness(0.7) saturate(0.8)", transition: "filter 0.2s" }} />
                 </div>
               ))}
             </div>
@@ -454,7 +454,7 @@ function About() {
       <div style={{ maxWidth: 1200, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "5rem", alignItems: "center" }} className="about-grid">
         <Reveal>
           <div style={{ boxShadow: "0 20px 60px rgba(26,22,18,0.12), 0 0 0 1px rgba(160,120,42,0.1)", overflow: "hidden" }}>
-            <img src={poster3} alt="Bezoek Casa Cavour Bertinoro" style={{ width: "100%", display: "block", transition: "transform 0.6s ease" }}
+            <img src={poster3} loading="lazy" decoding="async" alt="Bezoek Casa Cavour Bertinoro" style={{ width: "100%", display: "block", transition: "transform 0.6s ease" }}
               onMouseEnter={e => e.currentTarget.style.transform="scale(1.02)"}
               onMouseLeave={e => e.currentTarget.style.transform="scale(1)"} />
           </div>
@@ -832,6 +832,7 @@ function Contact() {
         body: JSON.stringify(payload),
       });
       if (!res.ok) throw new Error("bad status");
+      if (typeof window.gtag === "function") window.gtag("event", "generate_lead");
       setSent(true);
       form.reset();
     } catch (err) {

@@ -5,7 +5,7 @@
   <!-- Italian version (primary) -->
   <url>
     <loc>https://www.casa-cavour.com/</loc>
-    <lastmod>2026-04-24</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <xhtml:link rel="alternate" hreflang="it"        href="https://www.casa-cavour.com/" />
     <xhtml:link rel="alternate" hreflang="en"        href="https://en.casa-cavour.com/" />
     <xhtml:link rel="alternate" hreflang="nl"        href="https://nl.casa-cavour.com/" />
@@ -15,7 +15,7 @@
   <!-- English version -->
   <url>
     <loc>https://en.casa-cavour.com/</loc>
-    <lastmod>2026-04-24</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <xhtml:link rel="alternate" hreflang="it"        href="https://www.casa-cavour.com/" />
     <xhtml:link rel="alternate" hreflang="en"        href="https://en.casa-cavour.com/" />
     <xhtml:link rel="alternate" hreflang="nl"        href="https://nl.casa-cavour.com/" />
@@ -25,11 +25,86 @@
   <!-- Dutch version -->
   <url>
     <loc>https://nl.casa-cavour.com/</loc>
-    <lastmod>2026-04-24</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <xhtml:link rel="alternate" hreflang="it"        href="https://www.casa-cavour.com/" />
     <xhtml:link rel="alternate" hreflang="en"        href="https://en.casa-cavour.com/" />
     <xhtml:link rel="alternate" hreflang="nl"        href="https://nl.casa-cavour.com/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.casa-cavour.com/" />
   </url>
+
+  <!-- POST-URLS-START (generato automaticamente da generate-blog-pages.mjs, non modificare a mano) -->
+  <url>
+    <loc>https://nl.casa-cavour.com/post/5-dingen-bertinoro-weekend.html</loc>
+    <lastmod>2025-03-10</lastmod>
+  </url>
+  <url>
+    <loc>https://nl.casa-cavour.com/post/bertinoro-romantisch-weekend.html</loc>
+    <lastmod>2025-03-25</lastmod>
+  </url>
+  <url>
+    <loc>https://nl.casa-cavour.com/post/geo-aeo-appartement-vs-hotel-romagna-2026-nl.html</loc>
+    <lastmod>2026-10-06</lastmod>
+  </url>
+  <url>
+    <loc>https://nl.casa-cavour.com/post/geo-aeo-cosa-fare-bertinoro-weekend-2026.html</loc>
+    <lastmod>2026-04-21</lastmod>
+  </url>
+  <url>
+    <loc>https://nl.casa-cavour.com/post/geo-aeo-costi-affitto-breve-romagna-2026-nl.html</loc>
+    <lastmod>2026-09-09</lastmod>
+  </url>
+  <url>
+    <loc>https://nl.casa-cavour.com/post/geo-aeo-ontsnappen-routine-bologna-2026-nl.html</loc>
+    <lastmod>2026-04-09</lastmod>
+  </url>
+  <url>
+    <loc>https://nl.casa-cavour.com/post/geo-aeo-opladen-romagna-2026-nl.html</loc>
+    <lastmod>2026-06-08</lastmod>
+  </url>
+  <url>
+    <loc>https://nl.casa-cavour.com/post/geo-aeo-pet-friendly-romagna-accommodation-2026-en.html</loc>
+    <lastmod>2026-04-24</lastmod>
+  </url>
+  <url>
+    <loc>https://nl.casa-cavour.com/post/geo-aeo-privetuin-heuvels-romagna-2026-nl.html</loc>
+    <lastmod>2026-04-27</lastmod>
+  </url>
+  <url>
+    <loc>https://nl.casa-cavour.com/post/geo-aeo-romantisch-weekend-romagna-heuvels-2026-nl.html</loc>
+    <lastmod>2026-04-13</lastmod>
+  </url>
+  <url>
+    <loc>https://nl.casa-cavour.com/post/geo-aeo-smart-working-romagna-2026-nl.html</loc>
+    <lastmod>2026-05-18</lastmod>
+  </url>
+  <url>
+    <loc>https://nl.casa-cavour.com/post/geo-aeo-verblijven-bezoek-wijnhuizen-romagna-2025-nl.html</loc>
+    <lastmod>2026-04-07</lastmod>
+  </url>
+  <url>
+    <loc>https://nl.casa-cavour.com/post/geo-aeo-verblijven-heuvels-romagna-2026-nl.html</loc>
+    <lastmod>2026-05-22</lastmod>
+  </url>
+  <url>
+    <loc>https://nl.casa-cavour.com/post/geo-aeo-waar-overnachten-forli-cesena-2025-nl.html</loc>
+    <lastmod>2026-04-04</lastmod>
+  </url>
+  <url>
+    <loc>https://nl.casa-cavour.com/post/geo-aeo-weekend-vendemmia-romagna-2026-nl.html</loc>
+    <lastmod>2026-07-23</lastmod>
+  </url>
+  <url>
+    <loc>https://nl.casa-cavour.com/post/geo-aeo-wijntoerisme-romagna-verblijf-2026-nl.html</loc>
+    <lastmod>2026-08-17</lastmod>
+  </url>
+  <url>
+    <loc>https://nl.casa-cavour.com/post/giro-italia-bertinoro-2027-nl.html</loc>
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
+    <loc>https://nl.casa-cavour.com/post/korte-verhuur-romagna-wat-te-zien.html</loc>
+    <lastmod>2025-03-18</lastmod>
+  </url>
+  <!-- POST-URLS-END -->
 
 </urlset>

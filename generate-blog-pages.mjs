@@ -326,6 +326,51 @@ ${bodyBlocks}
 `;
 }
 
+// ── Sitemap ────────────────────────────────────────────────────────────────
+// Aggiunge a public/sitemap*.xml una <url> per ciascun articolo attivo (pagina
+// /post/{slug}.html), tra i marcatori POST-URLS-START / POST-URLS-END. Le home
+// già presenti nel file non vengono toccate. Si rigenera a ogni build insieme
+// alle pagine, quindi un articolo disattivato esce dalla sitemap e uno nuovo
+// entra senza passi manuali. lastmod = data dell'articolo (campo "data").
+const SITEMAP_START = "<!-- POST-URLS-START (generato automaticamente da generate-blog-pages.mjs, non modificare a mano) -->";
+const SITEMAP_END = "<!-- POST-URLS-END -->";
+
+function lastmodDi(post) {
+  const m = /^\d{4}-\d{2}-\d{2}/.exec(String(post.data));
+  return m ? m[0] : new Date(post.data).toISOString().slice(0, 10);
+}
+
+function scriviSitemap(visibili) {
+  const publicDir = join(ROOT, "public");
+  const righe = visibili
+    .slice()
+    .sort((a, b) => a.slug.localeCompare(b.slug))
+    .map((p) => [
+      "  <url>",
+      `    <loc>${escapeAttr(`${SITE_URL}/post/${p.slug}.html`)}</loc>`,
+      `    <lastmod>${lastmodDi(p)}</lastmod>`,
+      "  </url>",
+    ].join("\n"));
+  const blocco = [`  ${SITEMAP_START}`, ...righe, `  ${SITEMAP_END}`].join("\n");
+  const files = readdirSync(publicDir).filter((f) => /^sitemap(-[A-Za-z]{2})?\.xml$/.test(f));
+  if (files.length === 0) throw new Error("generate-blog-pages: nessun file sitemap*.xml in public/");
+  for (const f of files) {
+    const p = join(publicDir, f);
+    let xml = readFileSync(p, "utf8");
+    const a = xml.indexOf(SITEMAP_START);
+    const b = xml.indexOf(SITEMAP_END);
+    if (a !== -1 && b !== -1) {
+      const inizioRiga = xml.lastIndexOf("\n", a) + 1;
+      xml = xml.slice(0, inizioRiga) + blocco + xml.slice(b + SITEMAP_END.length);
+    } else {
+      if (!xml.includes("</urlset>")) throw new Error(`generate-blog-pages: ${f} senza </urlset>`);
+      xml = xml.replace("</urlset>", `${blocco}\n\n</urlset>`);
+    }
+    writeFileSync(p, xml, "utf8");
+  }
+  console.log(`generate-blog-pages: sitemap aggiornata (${files.join(", ")}) con ${visibili.length} articoli`);
+}
+
 async function main() {
   const posts = await loadPosts();
 
@@ -369,6 +414,7 @@ async function main() {
     writeFileSync(join(OUT_DIR, `${post.slug}.html`), html, "utf8");
   }
 
+  scriviSitemap(visibili);
   console.log(`generate-blog-pages: generate ${visibili.length} pagine in public/post/`);
 }
 
