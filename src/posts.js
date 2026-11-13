@@ -906,7 +906,7 @@ export const posts = [
       },
       {
         tipo: "paragrafo",
-        testo: "Accommodatie: vanaf €85 per nacht, actuele tarieven op Airbnb. Diner in een trattoria: €25-35 per persoon. Wijnproeverij met rondleiding: €15-25 per persoon. Ontbijt en lunch, als je zelf kookt met producten van de lokale markt, blijven beperkt."
+        testo: "Accommodatie: vanaf €95 per nacht, actuele tarieven op Airbnb. Diner in een trattoria: €25-35 per persoon. Wijnproeverij met rondleiding: €15-25 per persoon. Ontbijt en lunch, als je zelf kookt met producten van de lokale markt, blijven beperkt."
       },
       { tipo: "link", testo: "https://www.airbnb.com/rooms/1374591120957342823", etichetta: "Actuele tarieven op Airbnb" },
       {
