@@ -192,11 +192,89 @@ function renderContentBlock(b, idToSlug) {
   return null;
 }
 
+// ─────────────────────────────────────────────────────────────────────────────
+// Lunghezza di <title> e meta description (aggiunto 18/11/2026).
+//
+// Bing Webmaster Tools segnalava "Title too long" su 18 pagine su 19 per sito
+// (fino a 150 caratteri) e "Meta Description too long or too short" su quasi
+// tutte (fino a 378 caratteri). Qui si accorcia solo quello che finisce nel
+// <head>: il titolo visibile (<h1>), il sommario a inizio articolo, i tag
+// og:title e twitter:title e la descrizione nel JSON-LD restano interi.
+//
+// Titolo: si tiene la parte prima dei due punti, quando c'e' ed e' abbastanza
+// lunga da reggersi da sola, poi si aggiunge il marchio nella forma lunga se
+// ci sta e in quella corta altrimenti.
+// Description: si prendono quante frasi intere stanno nel limite; se la prima
+// frase e' gia' troppo lunga si taglia all'ultima parola e si mettono i
+// puntini. In entrambi i casi non resta mai una preposizione o un articolo
+// appeso in fondo.
+// ─────────────────────────────────────────────────────────────────────────────
+const LIMITE_TITLE = 65;
+const LIMITE_DESC = 155;
+const BRAND_LUNGO = " | Casa Cavour Bertinoro";
+const BRAND_CORTO = " | Casa Cavour";
+
+// Parole di servizio delle tre lingue: nessuna deve restare in coda a un testo
+// troncato. L'elenco e' unico per i tre siti di proposito, cosi' resta identico
+// in tutti e tre i repo e si aggiorna in un posto solo.
+const PAROLE_DI_CODA = new Set([
+  "a", "ad", "al", "allo", "alla", "ai", "agli", "alle", "con", "da", "dal", "dallo", "dalla",
+  "dai", "dagli", "dalle", "di", "del", "dello", "della", "dei", "degli", "delle", "e", "ed",
+  "fra", "il", "in", "la", "le", "lo", "nei", "nel", "nella", "nelle", "nello", "negli", "o",
+  "per", "su", "sul", "sulla", "sulle", "sui", "tra", "un", "una", "uno",
+  "and", "at", "by", "for", "from", "of", "on", "or", "the", "to", "with", "your",
+  "aan", "bij", "de", "een", "en", "het", "met", "naar", "om", "op", "over", "te", "van", "voor",
+]);
+
+function togliCodaDebole(testo) {
+  const parole = testo.split(" ");
+  while (parole.length > 3 && PAROLE_DI_CODA.has(parole[parole.length - 1].toLowerCase().replace(/[.,;:]$/, ""))) {
+    parole.pop();
+  }
+  return parole.join(" ").replace(/[\s,;:.–-]+$/, "");
+}
+
+function titoloBreve(titolo) {
+  let base = titolo.trim();
+  const duePunti = base.indexOf(":");
+  if (duePunti > 14) base = base.slice(0, duePunti).trim();
+
+  if ((base + BRAND_CORTO).length > LIMITE_TITLE) {
+    const max = LIMITE_TITLE - BRAND_CORTO.length;
+    let taglio = base.slice(0, max);
+    const spazio = taglio.lastIndexOf(" ");
+    if (spazio > 20) taglio = taglio.slice(0, spazio);
+    base = togliCodaDebole(taglio);
+  }
+
+  return (base + BRAND_LUNGO).length <= LIMITE_TITLE ? base + BRAND_LUNGO : base + BRAND_CORTO;
+}
+
+function descrizioneBreve(sommario) {
+  const s = sommario.trim().replace(/\s+/g, " ");
+  if (s.length <= LIMITE_DESC) return s;
+
+  const frasi = s.match(/[^.!?]+[.!?]+(\s|$)/g);
+  if (frasi) {
+    let acc = "";
+    for (const f of frasi) {
+      if ((acc + f).trim().length > LIMITE_DESC) break;
+      acc += f;
+    }
+    acc = acc.trim();
+    if (acc.length >= 70) return acc;
+  }
+
+  const taglio = s.slice(0, LIMITE_DESC - 3);
+  const spazio = taglio.lastIndexOf(" ");
+  return togliCodaDebole(taglio.slice(0, spazio)) + "...";
+}
+
 function renderPage(post, idToSlug) {
   const slug = post.slug;
   const url = `${SITE_URL}/post/${slug}.html`;
-  const title = `${post.titolo} | Casa Cavour Bertinoro`;
-  const description = post.sommario;
+  const title = titoloBreve(post.titolo);
+  const description = descrizioneBreve(post.sommario);
   const dateIso = new Date(post.data).toISOString();
 
   const bodyBlocks = buildContenuto(post).map((b) => renderContentBlock(b, idToSlug)).filter(Boolean).join("\n");
