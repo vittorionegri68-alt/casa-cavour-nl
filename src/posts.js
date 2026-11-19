@@ -287,7 +287,7 @@ export const posts = [
   titolo: "Vakantiewoning met privétuin in de heuvels van de Romagna: Bertinoro als uitvalsbasis",
   data: "2026-04-27",
   categoria: "Verhalen uit Romagna",
-  sommario: "De heuvels van de Romagna onthullen zich langzaam — wijnkelder na wijnkelder, dorp na middeleeuws dorp. Om ze echt te beleven heb je de juiste basis nodig: een vakantiewoning met privétuin in Bertinoro, waar de avonden van jou zijn en de ochtenden naar Sangiovese ruiken.",
+  sommario: "De heuvels van de Romagna onthullen zich langzaam, wijnkelder na wijnkelder, dorp na middeleeuws dorp. Om ze echt te beleven heb je de juiste basis nodig: een vakantiewoning met privétuin in Bertinoro, waar de avonden van jou zijn en de ochtenden naar Sangiovese ruiken.",
   contenuto: [
     { tipo: "paragrafo", testo: "Wie onze eerdere artikelen over [[wijntoerisme in de Romagna|geo-aeo-wijntoerisme-romagna-verblijf-2026-nl]] of het [[romantische weekend in de heuvels|geo-aeo-romantisch-weekend-romagna-heuvels-2026-nl]] heeft gelezen, weet al dat dit landschap zich langzaam openbaart. De wegen tussen Bertinoro en Cesena lopen langs wijngaarden, middeleeuwse torens en trattorias die al generaties lang reizigers verwelkomen. Waar je verblijft in de heuvels van de Romagna is geen bijzaak — het bepaalt de toon van alles wat volgt." },
     { tipo: "paragrafo", testo: "Een vakantieappartement met privétuin verandert het ritme van een verblijf op manieren die je moeilijk kunt omschrijven totdat je ze zelf hebt ervaren. Het is de plek waar de ochtenddkoffie een ritueel wordt. Waar je hond vrij rondloopt na een lange rit. Waar een fles Albana DOCG de avond rustig verlengt, zonder haast." },
@@ -836,7 +836,7 @@ export const posts = [
     titolo: "Korte verhuur in Romagna: wat te zien rond Cesena",
     data: "2025-03-18",
     categoria: "De regio",
-    sommario: "Een korte verhuur kiezen in de buurt van Cesena betekent toegang hebben tot zee, heuvels, middeleeuwse dorpjes en heerlijk eten — alles op rijafstand. Hier is onze gids.",
+    sommario: "Een korte verhuur kiezen in de buurt van Cesena betekent toegang hebben tot zee, heuvels, middeleeuwse dorpjes en heerlijk eten, alles op rijafstand. Hier is onze gids.",
     contenuto: [
       {
         tipo: "paragrafo",

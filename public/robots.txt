@@ -1,4 +1,4 @@
-# robots.txt — Casa Cavour
+# robots.txt - Casa Cavour
 User-agent: *
 Allow: /
 
@@ -14,16 +14,22 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
+User-agent: Perplexity-User
+Allow: /
+
 User-agent: Googlebot
 Allow: /
 
 User-agent: Google-Extended
 Allow: /
 
-User-agent: anthropic-ai
+User-agent: ClaudeBot
 Allow: /
 
-User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
 Allow: /
 
 User-agent: cohere-ai
@@ -40,7 +46,6 @@ Allow: /
 
 User-agent: CCBot
 Allow: /
-
 
 # Sitemap location
 Sitemap: https://nl.casa-cavour.com/sitemap.xml

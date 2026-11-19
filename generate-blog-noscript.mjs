@@ -1,9 +1,13 @@
 // ─────────────────────────────────────────────────────────────────────────────
 // generate-blog-noscript.mjs
 //
-// Genera automaticamente il testo integrale degli articoli del blog (letti da
-// src/posts.jsx) e li inserisce nel blocco statico <noscript> di index.html,
-// tra i marcatori BLOG-STATIC-START / BLOG-STATIC-END.
+// Genera automaticamente due blocchi in index.html, entrambi letti da
+// src/posts.jsx:
+//
+// 1. BLOG-STATIC-START / BLOG-STATIC-END, dentro <noscript>: il testo integrale
+//    degli articoli.
+// 2. BLOG-INDEX-START / BLOG-INDEX-END, dentro il blocco pre-render in
+//    div#root: l'indice del blog, titolo e link verso ogni pagina /post/.
 //
 // Perché esiste: il blog è renderizzato solo lato client (React, stato
 // "aperto"), quindi i crawler che non eseguono JavaScript (molti crawler AI:
@@ -21,6 +25,15 @@
 // con la stessa regex e la stessa logica slug di generate-blog-pages.mjs.
 // Prima venivano pubblicati in chiaro nel noscript. Un id inesistente o
 // disattivato blocca la build, come in generate-blog-pages.mjs.
+//
+// v3 (19/11/2026): aggiunto il blocco BLOG-INDEX dentro div#root. Motivo
+// misurato il 19/11 sulle tre home live: tutti i 64 link verso le pagine
+// /post/ stavano dentro <noscript> e nessuno fuori, quindi per un crawler che
+// non esegue JavaScript gli articoli non erano raggiungibili da nessun link e
+// risultavano scopribili solo dalla sitemap. Bing, Brave e Mojeek avevano
+// indicizzato le home e nessun articolo. L'indice in div#root è HTML normale
+// nel body: React (createRoot) lo sostituisce al mount, i crawler lo leggono.
+// Il titolo H2 dei due blocchi ora viene da una sola costante (BLOG_TITLE).
 // ─────────────────────────────────────────────────────────────────────────────
 
 import { readFileSync, writeFileSync, copyFileSync, unlinkSync } from "node:fs";
@@ -32,9 +45,14 @@ const ROOT = __dirname;
 const POSTS_PATH = join(ROOT, "src", "posts.js");
 const INDEX_PATH = join(ROOT, "index.html");
 const SITE_URL = "https://nl.casa-cavour.com";
+const LOCALE = "nl-NL";
+const BLOG_TITLE = "Blog: Verhalen uit de Romagna";
 
 const START_MARKER = "<!-- BLOG-STATIC-START (generato automaticamente da generate-blog-noscript.mjs, non modificare a mano) -->";
 const END_MARKER = "<!-- BLOG-STATIC-END -->";
+
+const INDEX_START_MARKER = "<!-- BLOG-INDEX-START (generato automaticamente da generate-blog-noscript.mjs, non modificare a mano) -->";
+const INDEX_END_MARKER = "<!-- BLOG-INDEX-END -->";
 
 function escapeHtml(str) {
   return String(str)
@@ -83,7 +101,7 @@ function renderParagraphWithLinks(testo, idToSlug) {
 function formatDate(iso) {
   try {
     const d = new Date(iso);
-    return d.toLocaleDateString("nl-NL", { year: "numeric", month: "long", day: "numeric" });
+    return d.toLocaleDateString(LOCALE, { year: "numeric", month: "long", day: "numeric" });
   } catch {
     return iso;
   }
@@ -124,6 +142,32 @@ function renderArticle(post, idToSlug) {
   ].join("\n");
 }
 
+// Indice del blog per il blocco pre-render dentro div#root. È l'unico punto in
+// cui un crawler che non esegue JavaScript trova un link verso le pagine
+// /post/: non rimuoverlo e non spostarlo dentro <noscript>.
+function renderIndex(visibili, idToSlug) {
+  const items = visibili
+    .map((post) => {
+      const slug = idToSlug.get(post.id);
+      return [
+        `          <li>`,
+        `            <a href="${escapeHtml(`${SITE_URL}/post/${slug}.html`)}">${escapeHtml(post.titolo)}</a>`,
+        `            <time datetime="${escapeHtml(post.data)}">${escapeHtml(formatDate(post.data))}</time>`,
+        `          </li>`,
+      ].join("\n");
+    })
+    .join("\n");
+
+  return [
+    INDEX_START_MARKER,
+    `        <h2>${escapeHtml(BLOG_TITLE)}</h2>`,
+    `        <ul>`,
+    items,
+    `        </ul>`,
+    INDEX_END_MARKER,
+  ].join("\n");
+}
+
 async function main() {
   const posts = await loadPosts();
 
@@ -132,7 +176,7 @@ async function main() {
     .sort((a, b) => new Date(b.data) - new Date(a.data));
 
   if (visibili.length === 0) {
-    console.warn("generate-blog-noscript: nessun articolo attivo trovato, blocco non generato.");
+    console.warn("generate-blog-noscript: nessun articolo attivo trovato, blocchi non generati.");
     return;
   }
 
@@ -143,7 +187,7 @@ async function main() {
 
   const generated = [
     START_MARKER,
-    `    <h2>Blog: Verhalen uit de Romagna</h2>`,
+    `    <h2>${escapeHtml(BLOG_TITLE)}</h2>`,
     articlesHtml,
     END_MARKER,
   ].join("\n");
@@ -172,8 +216,33 @@ async function main() {
     newHtml = html.slice(0, match.index) + replacement + html.slice(match.index + full.length);
   }
 
+  // Indice del blog nel blocco pre-render dentro div#root. Nessun inserimento
+  // automatico: se i marcatori non ci sono la build si ferma, perché senza
+  // questo blocco le pagine /post/ tornano a non avere nessun link crawlabile.
+  const indexStartIdx = newHtml.indexOf(INDEX_START_MARKER);
+  const indexEndIdx = newHtml.indexOf(INDEX_END_MARKER);
+
+  if (indexStartIdx === -1 || indexEndIdx === -1) {
+    throw new Error(
+      "generate-blog-noscript: marcatori BLOG-INDEX-START / BLOG-INDEX-END non trovati in index.html. L'indice del blog dentro div#root è l'unico link crawlabile verso le pagine /post/: ripristinare i marcatori nel blocco pre-render."
+    );
+  }
+  if (indexStartIdx > indexEndIdx) {
+    throw new Error(
+      "generate-blog-noscript: in index.html il marcatore BLOG-INDEX-END precede BLOG-INDEX-START. Correggere l'ordine dei marcatori nel blocco pre-render."
+    );
+  }
+
+  const generatedIndex = renderIndex(visibili, idToSlug);
+  newHtml =
+    newHtml.slice(0, indexStartIdx) +
+    generatedIndex +
+    newHtml.slice(indexEndIdx + INDEX_END_MARKER.length);
+
   writeFileSync(INDEX_PATH, newHtml, "utf8");
-  console.log(`generate-blog-noscript: inseriti ${visibili.length} articoli nel blocco statico di index.html`);
+  console.log(
+    `generate-blog-noscript: ${visibili.length} articoli nel blocco statico e ${visibili.length} link nell'indice di index.html`
+  );
 }
 
 main().catch((err) => {

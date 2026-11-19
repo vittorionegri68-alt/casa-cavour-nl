@@ -1,6 +1,6 @@
 # Casa Cavour Bertinoro
 
-> Vakantieappartement met volledig ingerichte keuken in het historische centrum van Bertinoro, heuvels van de Romagna (FC). Het Balkon van de Romagna — ideale uitvalsbasis voor romantische weekends, wijntoerisme en authentieke verblijven in de Romagna.
+> Vakantieappartement met volledig ingerichte keuken in het historische centrum van Bertinoro, heuvels van de Romagna (FC). Het Balkon van de Romagna, ideale uitvalsbasis voor romantische weekends, wijntoerisme en authentieke verblijven in de Romagna.
 
 ## Property
 
@@ -37,17 +37,19 @@
 - Toegewijde werkruimte met WiFi
 - Zelf inchecken met sleutelkastje
 - Airconditioning en verwarming
-- Tot 4 gasten — inchecken om 16:00, uitchecken om 10:00
+- Tot 4 gasten, inchecken om 16:00, uitchecken om 10:00
 - CIN: IT040003C28FEZ8O7L
 
 ## AI Permissions
 
 Deze site staat toegang toe aan AI-crawlers voor indexering en citatie.
 
-User-agent: GPTBot — allowed
-User-agent: OAI-SearchBot — allowed
-User-agent: ClaudeBot — allowed
-User-agent: anthropic-ai — allowed
-User-agent: PerplexityBot — allowed
-User-agent: Bingbot — allowed
-User-agent: CCBot — allowed
+User-agent: GPTBot - allowed
+User-agent: OAI-SearchBot - allowed
+User-agent: ClaudeBot - allowed
+User-agent: Claude-SearchBot - allowed
+User-agent: Claude-User - allowed
+User-agent: PerplexityBot - allowed
+User-agent: Perplexity-User - allowed
+User-agent: Bingbot - allowed
+User-agent: CCBot - allowed
