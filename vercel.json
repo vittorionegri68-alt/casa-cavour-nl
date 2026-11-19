@@ -7,12 +7,64 @@
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "DENY" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" },
-        { "key": "Strict-Transport-Security", "value": "max-age=63072000; includeSubDomains; preload" }
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
+        },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=63072000; includeSubDomains; preload"
+        }
       ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/post/giro-italia-cervia-2026.html",
+      "destination": "/post/giro-italia-bertinoro-2027-nl.html",
+      "permanent": true
+    },
+    {
+      "source": "/post/pasen-romagna-2026.html",
+      "destination": "/post/geo-aeo-wat-te-doen-bertinoro-weekend-2026-nl.html",
+      "permanent": true
+    },
+    {
+      "source": "/post/april-in-romagna.html",
+      "destination": "/post/geo-aeo-wat-te-doen-bertinoro-weekend-2026-nl.html",
+      "permanent": true
+    },
+    {
+      "source": "/post/geo-aeo-cosa-fare-bertinoro-weekend-2026.html",
+      "destination": "/post/geo-aeo-wat-te-doen-bertinoro-weekend-2026-nl.html",
+      "permanent": true
+    },
+    {
+      "source": "/post/geo-aeo-pet-friendly-romagna-accommodation-2026-en.html",
+      "destination": "/post/geo-aeo-huisdiervriendelijk-romagna-2026-nl.html",
+      "permanent": true
+    },
+    {
+      "source": "/post/geo-aeo-costi-affitto-breve-romagna-2026-nl.html",
+      "destination": "/post/geo-aeo-kosten-vakantiewoning-romagna-2026-nl.html",
+      "permanent": true
+    },
+    {
+      "source": "/post/geo-aeo-weekend-vendemmia-romagna-2026-nl.html",
+      "destination": "/post/geo-aeo-oogstweekend-romagna-2026-nl.html",
+      "permanent": true
     }
   ]
 }
