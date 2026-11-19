@@ -363,7 +363,19 @@
       #prerender time{display:block;color:#666;font-size:.9rem}
       #prerender #lingue{font-size:.9rem;margin-bottom:1rem}
       #prerender #lingue a{margin-right:1rem}
+      /* Con JavaScript attivo il blocco resta fuori schermo: l'utente non vede
+         nessun lampo di contenuto non stilizzato prima del mount di React.
+         Il markup resta nel documento, quindi i crawler che non eseguono
+         JavaScript lo leggono normalmente, link compresi. */
+      #prerender{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);border:0}
     </style>
+    <!-- Senza JavaScript React non monta mai: il blocco torna visibile e
+         diventa la pagina, cosi' il contenuto non e' nascosto a nessuno. -->
+    <noscript>
+      <style>
+        #prerender{position:static;width:auto;height:auto;max-width:46rem;margin:0 auto;padding:1.5rem 1.25rem;overflow:visible;clip:auto;border:0}
+      </style>
+    </noscript>
 
 </head>
   <body>
