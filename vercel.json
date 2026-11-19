@@ -65,6 +65,11 @@
       "source": "/post/geo-aeo-weekend-vendemmia-romagna-2026-nl.html",
       "destination": "/post/geo-aeo-oogstweekend-romagna-2026-nl.html",
       "permanent": true
+    },
+    {
+      "source": "/sitemap-NL.xml",
+      "destination": "/sitemap.xml",
+      "permanent": true
     }
   ]
 }
