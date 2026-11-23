@@ -134,7 +134,13 @@ const ALTERNATES = {
 // così le pagine /post/ registrano visite, referral AI e download con la stessa configurazione della home.
 function readGaTracking() {
   const html = readFileSync(join(ROOT, "index.html"), "utf8");
-  const start = html.indexOf('<script async src="https://www.googletagmanager.com/gtag/js');
+  // Il blocco GA4 inizia dallo <script> che contiene window.dataLayer, non dal
+  // tag async: il Consent Mode va dichiarato PRIMA che gtag.js venga caricato,
+  // quindi il tag async e' l'ultimo elemento del blocco e non il primo.
+  // Cercando il tag async le pagine /post uscirebbero senza consent e senza
+  // gtag('config'), cioe' senza tracciamento.
+  const dataLayerPos = html.indexOf("window.dataLayer");
+  const start = dataLayerPos === -1 ? -1 : html.lastIndexOf("<script", dataLayerPos);
   const END_MARKER = "<!-- /tracciamento GA4 -->";
   const end = html.indexOf(END_MARKER);
   if (start === -1 || end === -1 || end < start) {
