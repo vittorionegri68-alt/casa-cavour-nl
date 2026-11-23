@@ -48,16 +48,25 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PJD89SFMDC"></script>
+    <!-- Google Analytics: Consent Mode v2 con analytics_storage negato.
+         GA4 non scrive cookie e invia ping senza identificativo persistente.
+         Il blocco consent deve restare PRIMA del caricamento di gtag.js:
+         se viene dopo, gtag.js parte con lo stato predefinito e scrive i cookie.
+         client_storage e anonymize_ip erano parametri di Universal Analytics,
+         GA4 li ignora: non vanno reintrodotti. -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-PJD89SFMDC', {
-        client_storage: 'none'
+      gtag('consent', 'default', {
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        analytics_storage: 'denied'
       });
+      gtag('js', new Date());
+      gtag('config', 'G-PJD89SFMDC');
     </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PJD89SFMDC"></script>
 
     <!-- AI referral tracking: registra le visite arrivate da assistenti AI come evento GA4 -->
     <script>
