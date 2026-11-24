@@ -1,0 +1,55 @@
+# Segnala a IndexNow gli URL del sito dopo ogni deploy di produzione.
+#
+# Si aggancia a deployment_status e non al push: Vercel registra su GitHub un
+# deployment per ogni build e ne aggiorna lo stato a success quando il sito e'
+# davvero online. Partire dal push significherebbe segnalare mentre e' ancora
+# in linea la versione vecchia.
+#
+# Lo script salta la chiamata quando il commit deployato non ha toccato
+# contenuto. Per una segnalazione volontaria, lanciare il workflow a mano
+# dalla scheda Actions.
+name: IndexNow
+
+on:
+  deployment_status:
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Segnala anche senza modifiche di contenuto"
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+concurrency:
+  group: indexnow-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  segnala:
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.deployment_status.state == 'success' &&
+       github.event.deployment.environment == 'Production')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del commit deployato
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.deployment.sha || github.sha }}
+          fetch-depth: 2
+
+      - name: Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Segnala a IndexNow
+        env:
+          SITE_URL: https://nl.casa-cavour.com
+          FORCE: ${{ inputs.force || false }}
+        run: |
+          export HEAD_SHA="$(git rev-parse HEAD)"
+          export BASE_SHA="$(git rev-parse HEAD~1 2>/dev/null || true)"
+          node .github/scripts/indexnow.mjs
