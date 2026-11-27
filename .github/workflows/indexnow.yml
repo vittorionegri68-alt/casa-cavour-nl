@@ -27,7 +27,31 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  controlla:
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.deployment_status.state == 'success' &&
+       github.event.deployment.environment == 'Production')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del commit deployato
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.deployment.sha || github.sha }}
+
+      - name: Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Controlla che il sito sia indicizzabile
+        env:
+          SITE_URL: https://nl.casa-cavour.com
+        run: node .github/scripts/check-indexability.mjs
+
+
   segnala:
+    needs: controlla
     if: >-
       github.event_name == 'workflow_dispatch' ||
       (github.event.deployment_status.state == 'success' &&
