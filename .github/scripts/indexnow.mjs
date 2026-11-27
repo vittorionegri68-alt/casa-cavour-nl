@@ -91,8 +91,16 @@ async function main() {
 
   const risposta = await fetch(`${SITE_URL}/sitemap.xml`);
   if (!risposta.ok) throw new Error(`sitemap non raggiungibile (HTTP ${risposta.status})`);
-  const urlList = [...(await risposta.text()).matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
-  if (urlList.length === 0) throw new Error("la sitemap live non contiene nessun URL");
+  const tutti = [...(await risposta.text()).matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
+  // IndexNow accetta solo URL dell'host dichiarato: la sitemap puo' contenere
+  // anche gli indirizzi delle altre lingue, e in quel caso rifiuta tutto con 422.
+  const urlList = tutti.filter((u) => {
+    try { return new URL(u).host === host; } catch { return false; }
+  });
+  if (tutti.length !== urlList.length) {
+    console.log(`esclusi ${tutti.length - urlList.length} URL di altri host`);
+  }
+  if (urlList.length === 0) throw new Error("la sitemap live non contiene nessun URL di questo host");
 
   const r = await fetch("https://api.indexnow.org/indexnow", {
     method: "POST",
